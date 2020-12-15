@@ -14,32 +14,32 @@ We stress that the use of optimization in SE is still a rapidly evolving field. 
 
 ### Essential
 
-[ ] Describes the search space  (e.g. constraints, independent variables choices) and explains why the optimization problem cannot be solved manually or through a brute force enumeration of all solutions within a reasonable timeframe (e.g., if the cross-product of the space of options is very large or if the time required to perform a task manually is very slow). 
-[ ] Includes a description of prior state of the art in this area, if it exists. If it does not, then this study must carefully motivate and define the new problem and solution. 
-[ ] Approaches are compared to a justified and appropriate baseline. If the approach solves a new problem, compare it to random search, at least. If not a new problem, compare to the existing state of the art.
-[ ] The solution formulation is explicitly defined, including a description of what a solution represents (e.g., a test suite or test case in test generation), how a solution is represented in evaluated approaches (e.g., a tree or vector structure), and how solutions are manipulated by the evaluated approaches. 
-[ ] All fitness functions used are explicitly defined, including a description of the type of goals that are minimized or maximized and the equations for calculating the fitness score. 
-[ ] The evaluated approaches are explicitly defined, including the applied techniques (e.g., simulated annealing, genetic algorithm), specific heuristics applied (e.g., single-point crossover), and the algorithm parameters and their values (e.g. crossover and mutation rates). 
-[ ] The effects of stochasticity must be understood and accounted for at all levels (e.g., from the application of randomized algorithms, in fitness functions that measure a random variable from the environment, and in data sampling). 
+- [ ] Describes the search space  (e.g. constraints, independent variables choices) and explains why the optimization problem cannot be solved manually or through a brute force enumeration of all solutions within a reasonable timeframe (e.g., if the cross-product of the space of options is very large or if the time required to perform a task manually is very slow). 
+- [ ] Includes a description of prior state of the art in this area, if it exists. If it does not, then this study must carefully motivate and define the new problem and solution. 
+- [ ] Approaches are compared to a justified and appropriate baseline. If the approach solves a new problem, compare it to random search, at least. If not a new problem, compare to the existing state of the art.
+- [ ] The solution formulation is explicitly defined, including a description of what a solution represents (e.g., a test suite or test case in test generation), how a solution is represented in evaluated approaches (e.g., a tree or vector structure), and how solutions are manipulated by the evaluated approaches. 
+- [ ] All fitness functions used are explicitly defined, including a description of the type of goals that are minimized or maximized and the equations for calculating the fitness score. 
+- [ ] The evaluated approaches are explicitly defined, including the applied techniques (e.g., simulated annealing, genetic algorithm), specific heuristics applied (e.g., single-point crossover), and the algorithm parameters and their values (e.g. crossover and mutation rates). 
+- [ ] The effects of stochasticity must be understood and accounted for at all levels (e.g., from the application of randomized algorithms, in fitness functions that measure a random variable from the environment, and in data sampling). 
   - Execute stochastic algorithms multiple times (using a different seed each time) or justify why this is not possible (e.g., approach is too slow, human-in-the-loop) 
   - Sample from data multiple times in a controlled manner. 
   - Multiple trials can either be performed as a cross-validation (multiple independent executions) or temporally (multiple applications as part of a timed sequence). 
-[ ] Compare results using statistics that compare distributions, rather than comparing the mean.
+- [ ] Compare results using statistics that compare distributions, rather than comparing the mean.
 
 ### Desirable
 
-[ ] Novelty is highly desirable. Where possible, authors should explore a new problem type (or a new area within an existing problem space) which has never been studied in the literature. 
-[ ] Reproductions and replications of prior work (perhaps with some small improvements) should be encouraged and rewarded. 
-[ ] To enable open science, a replication package should be made available that conforms to SIGSOFT standards for a functional artifact. 
+- [ ] Novelty is highly desirable. Where possible, authors should explore a new problem type (or a new area within an existing problem space) which has never been studied in the literature. 
+- [ ] Reproductions and replications of prior work (perhaps with some small improvements) should be encouraged and rewarded. 
+- [ ] To enable open science, a replication package should be made available that conforms to SIGSOFT standards for a functional artifact. 
   - If data cannot be shared (e.g., industrial case study), it is desirable to create a sample dataset that can be shared to illustrate the use of the algorithms. 
-[ ] When using statistics, favor non-parametric to parametric methods, as distributions are generally not known. Do not assume that data is normally distributed, unless you can provide an analysis showing normality. 
-[ ] Provide justification for the parameter values used when executing the evaluated approaches (and note that experiments trying a wide range of different parameter values would be extraordinary, see below). 
-[ ] Use an appropriate meta-evaluation criteria to compare solutions. For example, if applying a  multi-objective optimization approach, then use a criterion that can analyze the Paretor frontier of solutions (e.g., hypervolume indicator). Regardless of the chosen criteria, provide a justification for that choice. 
+- [ ] When using statistics, favor non-parametric to parametric methods, as distributions are generally not known. Do not assume that data is normally distributed, unless you can provide an analysis showing normality. 
+- [ ] Provide justification for the parameter values used when executing the evaluated approaches (and note that experiments trying a wide range of different parameter values would be extraordinary, see below). 
+- [ ] Use an appropriate meta-evaluation criteria to compare solutions. For example, if applying a  multi-objective optimization approach, then use a criterion that can analyze the Paretor frontier of solutions (e.g., hypervolume indicator). Regardless of the chosen criteria, provide a justification for that choice. 
 
 ### Extraordinary
 
-[ ] Provide an analysis of different parameter choices to the algorithm, indicating how the final parameters were selected (e.g., applying hyperparameter optimization). 
-[ ] Provide an analysis of the fitness landscape for one or more of the chosen fitness functions. 
+- [ ] Provide an analysis of different parameter choices to the algorithm, indicating how the final parameters were selected (e.g., applying hyperparameter optimization). 
+- [ ] Provide an analysis of the fitness landscape for one or more of the chosen fitness functions. 
 
 ## General Quality Criteria
 
