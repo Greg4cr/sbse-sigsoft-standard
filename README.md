@@ -12,6 +12,7 @@ This standard applies to empirical studies that meet the following criteria:
 
 We stress that the use of optimization in SE is still a rapidly evolving field. Hence, the following criteria are approximate and many exceptions exist to these criteria. Reviewers should reward sound and novel work and, where possible, support a diverse range of studies.
 
+
 | **Importance** | **Attribute** |
 | Essential | [ ] Describes the search space  (e.g. constraints, independent variables choices) and explains why the optimization problem cannot be solved manually or through a brute force enumeration of all solutions within a reasonable timeframe (e.g., if the cross-product of the space of options is very large or if the time required to perform a task manually is very slow). |
 | | [ ] Includes a description of prior state of the art in this area, if it exists. If it does not, then this study must carefully motivate and define the new problem and solution. |
@@ -33,6 +34,7 @@ We stress that the use of optimization in SE is still a rapidly evolving field. 
 | | [ ] Use an appropriate meta-evaluation criteria to compare solutions. For example, if applying a  multi-objective optimization approach, then use a criterion that can analyze the Paretor frontier of solutions (e.g., hypervolume indicator). Regardless of the chosen criteria, provide a justification for that choice. |
 | Extraordinary | [ ] Provide an analysis of different parameter choices to the algorithm, indicating how the final parameters were selected (e.g., applying hyperparameter optimization). |
 | | [ ] Provide an analysis of the fitness landscape for one or more of the chosen fitness functions. |
+
 
 ## General Quality Criteria
 
