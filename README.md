@@ -52,13 +52,15 @@ The most valuable quality criteria for optimization studies in SE include credib
 
 ## Antipatterns
 
-- Statistical tests (e.g., Mann-Whitney Wilcoxan test) that identify distribution differences are used to claim that technique A outperforms technique B. An effect size test should also be applied to judge direction and magnitude of the distribution difference.
+- Significance tests (e.g., Mann-Whitney Wilcoxan test) without effect size tests. 
+   - "Significance" tests if distriubtuins can be distingused fro each other.
+   - But "effect size" tests are required to check if the difference between distributions is "interesting" and not just a trivirally "small effect".
 - Multiple trials conducted, but no disclosure or discussion on the variation between trials. Reporting a median, without any indication of variance (e.g., a boxplot), does not indicate potential variation between each trial.
 
 ## Invalid Criticisms
 
 - That a reproduction or replication study is just a repeat of prior work. Replications and reproductions are essential to the scientific method and the advancement of a field. 
-  - To the authors writing such papers: (a) motivate the importance of the initial work (being replicated or reproduced here) ; (b) offer new insight beyond the initial study. 
+  - To the authors writing such  reprodictiom papers: (a) motivate the importance of the initial work (being replicated or reproduced here) ; (b) offer new insight beyond the initial study. 
 - That an approach is not benchmarked against an inappropriate or unavailable baseline. If a state-of-the-art approach lacks an available and functional implementation, it is not reasonable to expect the author to recreate that approach for benchmarking purposes. 
 - That results are negative (i.e., worse than a random search or other state-of-the-art). Such results are still valuable and advance the state of the field.
 
