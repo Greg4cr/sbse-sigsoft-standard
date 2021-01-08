@@ -59,7 +59,7 @@ The most valuable quality criteria for optimization studies in SE include credib
 
 ## Invalid Criticisms
 
-- That a reproduction or replication study is just a repeat of prior work. Replications and reproductions are essential to the scientific method and the advancement of a field. 
+- That a reproduction or replication study is just a repeat of prior work (see **Replication Studies**). Replications and reproductions are essential to the scientific method and the advancement of a field. 
   - To the authors writing such  reprodictiom papers: (a) motivate the importance of the initial work (being replicated or reproduced here) ; (b) offer new insight beyond the initial study. 
 - That an approach is not benchmarked against an inappropriate or unavailable baseline. If a state-of-the-art approach lacks an available and functional implementation, it is not reasonable to expect the author to recreate that approach for benchmarking purposes. 
 - That results are negative (i.e., worse than a random search or other state-of-the-art). Such results are still valuable and advance the state of the field.
