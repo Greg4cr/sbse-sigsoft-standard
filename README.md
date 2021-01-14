@@ -18,7 +18,6 @@ We stress that the use of optimization in SE is still a rapidly evolving field. 
 - [ ] Includes a description of prior state of the art in this area, if it exists. If it does not, then this study must carefully motivate and define the new problem and solution. 
 - [ ] Approaches are compared to a justified and appropriate baseline. If the approach solves a new problem, compare it to random search, at least. If not a new problem, compare to the existing state of the art.
 - [ ] As to algorithm selection:  The algorithm underlying an approach (e.g., the metaheuristic) should be justified and appropriate for the problem being optimized. Perhaps do use  not use simulated annealing, NSGA-II, etc. to solve an optimization problem unless it is actually the appropriate approach for the optimization problem.
-- [ ] Also, using older older (and well udnerstfandood algorithms) may be valid when they are used as (1) as part of a larger  test suite that compares many approaches; e.g. (2) to offer a “straw man” method that defines the “floor” of the performance (that everything else needs to beat); e.g. (3) as a workbench within which one thing is changed (e.g. the fitness function) but everything else remains constant.
 - [ ] The solution formulation is explicitly defined, including a description of what a solution represents (e.g., a test suite or test case in test generation), how a solution is represented in evaluated approaches (e.g., a tree or vector structure), and how solutions are manipulated by the evaluated approaches. 
 - [ ] All fitness functions used are explicitly defined, including a description of the type of goals that are minimized or maximized and the equations for calculating the fitness score. 
 - [ ] The evaluated approaches are explicitly defined, including the applied techniques (e.g., simulated annealing, genetic algorithm), specific heuristics applied (e.g., single-point crossover), and the algorithm parameters and their values (e.g. crossover and mutation rates). 
@@ -51,19 +50,23 @@ The most valuable quality criteria for optimization studies in SE include credib
 
  - The number of trials can be constrained by available time or experimental resources, in cases where experiments are time-consuming to repeat or have human elements. In such cases, multiple trials are still ideal, but a limited number of trials can be justified as long as the limitations are disclosed, and as long as the possible effects of stochasticity are discussed.
  - The use of industrial case studies is important in demonstrating the real-world application of a proposed technique, but industrial data generally cannot be shared. In such cases, it is recommended that a small open-source example be prepared and distributed as part of a replication package to demonstrate how the approach can be applied.
- - Be cautious of rejection papers that seem “unimportant” (in the eyes of a reviewer).  While it is true that paper need a motivational statement (in order to increase the audience of a paper), it is also true that some major advances in the field arise only after much speculative exploration of novel approaches (that may currently seem unpromising).
+
 
 
 ## Antipatterns
 
-- Significance tests (e.g., Mann-Whitney Wilcoxan test) without effect size tests. 
+ - Significance tests (e.g., Mann-Whitney Wilcoxan test) without effect size tests. 
    - "Significance" tests if distriubtuins can be distingused fro each other.
    - But "effect size" tests are required to check if the difference between distributions is "interesting" and not just a trivirally "small effect".
 - Multiple trials conducted, but no disclosure or discussion on the variation between trials. Reporting a median, without any indication of variance (e.g., a boxplot), does not indicate potential variation between each trial.
 
 ## Invalid Criticisms
 
-- That a reproduction or replication study is just a repeat of prior work (see **Replication Studies**). Replications and reproductions are essential to the scientific method and the advancement of a field. 
+
+ - The paepr is unimportant. Be cautious of rejection papers that seem “unimportant” (in the eyes of a reviewer).  While it is true that paper need a motivational statement (in order to increase the audience of a paper), it is also true that some major advances in the field arise only after much speculative exploration of novel approaches (that may currently seem unpromising).
+- The paepr just uses odler algorithms with no reference tor ecent work.   Using  older (and well udnerstfandood algorithms) may be valid when they are used as (1) as part of a larger test suite that compares many approaches; e.g. (2) to offer a “straw man” method that defines the “floor” of the performance (that everything else needs to beat); e.g. (3) as a workbench within which one thing is changed (e.g. the fitness function) but everything else remains constant.
+ 
+ - That a reproduction or replication study is just a repeat of prior work (see **Replication Studies**). Replications and reproductions are essential to the scientific method and the advancement of a field. 
   - To the authors writing such  reprodictiom papers: (a) motivate the importance of the initial work (being replicated or reproduced here) ; (b) offer new insight beyond the initial study. 
 - That an approach is not benchmarked against an inappropriate or unavailable baseline. If a state-of-the-art approach lacks an available and functional implementation, it is not reasonable to expect the author to recreate that approach for benchmarking purposes. 
 - That results are negative (i.e., worse than a random search or other state-of-the-art). Such results are still valuable and advance the state of the field.
