@@ -30,11 +30,11 @@ We stress that the use of optimization in SE is still a rapidly evolving field. 
 
 - [ ] Novelty is highly desirable. Where possible, authors should explore a new problem type (or a new area within an existing problem space) which has never been studied in the literature. 
 - [ ] Reproductions and replications of prior work (perhaps with some small improvements) should be encouraged and rewarded. 
-- [ ] To enable open science, a replication package should be made available that conforms to SIGSOFT standards for a functional artifact. 
+- [ ] To enable open science, a replication package should be made available that conforms to SIGSOFT standards for  artifacts. 
   - If data cannot be shared (e.g., industrial case study), it is desirable to create a sample dataset that can be shared to illustrate the use of the algorithms. 
 - [ ] When using statistics, favor non-parametric to parametric methods, as distributions are generally not known. Do not assume that data is normally distributed, unless you can provide an analysis showing normality. 
 - [ ] Provide justification for the parameter values used when executing the evaluated approaches (and note that experiments trying a wide range of different parameter values would be extraordinary, see below). 
-- [ ] Use an appropriate meta-evaluation criteria to compare solutions. For example, if applying a  multi-objective optimization approach, then use a criterion that can analyze the Paretor frontier of solutions (e.g., hypervolume indicator). Regardless of the chosen criteria, provide a justification for that choice. 
+- [ ] Use an appropriate meta-evaluation criteria to compare solutions. For example, if applying a  multi-objective optimization approach, then use a criterion that can analyze the Paretor frontier of solutions (e.g., generational distance and inverse generational distance). Regardless of the chosen criteria, provide a justification for that choice. 
 
 ### Extraordinary
 
