@@ -68,6 +68,8 @@ The most valuable quality criteria for optimization studies in SE include sounde
 
 ## Notes
 
+**This standard is a living artifact.** We welcome pull requests with suggested edits to existing items, additional items in each category, suggested reading, and exemplar papers. 
+
 ## Suggested Readings
 
 - Amritanshu Agrawal, Tim Menzies, Leandro L. Minku, Markus Wagner, and Zhe Yu. "Better software analytics via" DUO": Data mining algorithms using/used-by optimizers." Empirical Software Engineering 25, no. 3 (2020): 2099-2136.
