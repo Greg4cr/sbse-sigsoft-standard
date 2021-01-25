@@ -30,8 +30,7 @@ We stress that the use of optimization in SE is still a rapidly evolving field. 
 
 ### Desirable
 
-- [ ] Novelty is highly desirable. Where possible, authors should explore a new problem type (or a new area within an existing problem space) which has never been studied in the literature. 
-- [ ] Reproductions and replications of prior work (perhaps with some small improvements) should be encouraged and rewarded. 
+- [ ] States if and how the study explores a new problem type (or a new area within an existing problem space) that has never been studied in the literature, or if the study reproduces and replicates prior work (and explains any small improvement). 
 - [ ] To enable open science, a replication package should be made available that conforms to SIGSOFT standards for artifacts. 
 - [ ] If data cannot be shared (e.g., industrial case study), it is desirable to create a sample dataset that can be shared to illustrate the use of the algorithms. 
 - [ ] Provide justification for the parameter values used when executing the evaluated approaches (and note that experiments trying a wide range of different parameter values would be extraordinary, see below). 
