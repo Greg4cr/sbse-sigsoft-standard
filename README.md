@@ -1,10 +1,12 @@
-# Optimization Studies in SE (including SBSE)
+# Optimization Studies in SE (including Search-Based Software Engineering)
+<standard name="Optimization Studies in SE (including Search-Based Software Engineering)">
 
-*Research studies that focus on the formulation of software engineering problems as search problems, and apply optimization techniques (e.g., metaheuristics and evolutionary algorithms) to solve such problems.*
+Research studies that focus on the formulation of software engineering problems as search problems, and apply optimization techniques (e.g., metaheuristics and evolutionary algorithms) to solve such problems.
 
 ## Application
 
 This standard applies to empirical studies that meet the following criteria:
+
 - Formulates a software engineering task (e.g., test input creation, design refactoring, effort prediction) as an optimization problem, with one or more specified fitness functions used to judge success in this task.
 - Applies one or more approaches that generate solutions to the problem in an attempt to maximize or minimize the specified fitness functions.
 
@@ -13,6 +15,7 @@ This standard applies to empirical studies that meet the following criteria:
 We stress that the use of optimization in SE is still a rapidly evolving field. Hence, the following criteria are approximate and many exceptions exist to these criteria. Reviewers should reward sound and novel work and, where possible, support a diverse range of studies.
 
 ### Essential
+<checklist name="Essential">
 
 - [ ] Describes the search space  (e.g., constraints, independent variables choices) and explains why the optimization problem cannot be solved manually or through a brute force enumeration of all solutions within a reasonable timeframe (e.g., if the cross-product of the space of options is very large or if the time required to perform a task manually is very slow). 
 - [ ] Includes a description of prior state of the art in this area, if it exists. If it does not, then this study must carefully motivate and define the problem tackled and the solution proposed. 
@@ -28,7 +31,10 @@ We stress that the use of optimization in SE is still a rapidly evolving field. 
 - [ ] Compare results using statistics that compare distributions, rather than comparing the mean.
 - [ ] When using statistics, favor non-parametric to parametric methods, as distributions are generally not known. Do not assume that data is normally distributed, unless you can provide an analysis showing normality. 
 
+</checklist>
+
 ### Desirable
+<checklist name="Desirable">
 
 - [ ] States if and how the study explores a new problem type (or a new area within an existing problem space) that has never been studied in the literature, or if the study reproduces and replicates prior work (and explains any small improvement). 
 - [ ] To enable open science, a replication package should be made available that conforms to SIGSOFT standards for artifacts. 
@@ -36,10 +42,14 @@ We stress that the use of optimization in SE is still a rapidly evolving field. 
 - [ ] Provide justification for the parameter values used when executing the evaluated approaches (and note that experiments trying a wide range of different parameter values would be extraordinary, see below). 
 - [ ] Use an appropriate meta-evaluation criteria to compare solutions. For example, if applying a multi-objective optimization approach, then use a criterion that can analyze the Pareto frontier of solutions (e.g., generational distance and inverse generational distance). Regardless of the chosen criteria, provide a justification for that choice. 
 
+</checklist>
+
 ### Extraordinary
+<checklist name="Extraordinary">
 
 - [ ] Provide an analysis of different parameter choices to the algorithm, indicating how the final parameters were selected (e.g., applying hyperparameter optimization). 
 - [ ] Provide an analysis of the fitness landscape for one or more of the chosen fitness functions. 
+</checklist>
 
 ## General Quality Criteria
 
@@ -65,10 +75,6 @@ The most valuable quality criteria for optimization studies in SE include sounde
 - That results of a study are negative (i.e., worse than a random search or other state-of-the-art). Such results are still valuable and advance the state of the field, as long as the study meets the general quality criteria and the essential attributes at least.
 - That a multi-objective approach is not compared to a single-objective approach by evaluating each objective separately. This is not a meaningful comparison because, in a multi-objective problem, the trade-off between the objectives is a major factor in result quality. It is more important to consider the Pareto frontiers and quality indicators.
 
-## Notes
-
-**This standard is a living artifact.** We welcome pull requests with suggested edits to existing items, additional items in each category, suggested reading, and exemplar papers. 
-
 ## Suggested Readings
 
 - Amritanshu Agrawal, Tim Menzies, Leandro L. Minku, Markus Wagner, and Zhe Yu. "Better software analytics via" DUO": Data mining algorithms using/used-by optimizers." Empirical Software Engineering 25, no. 3 (2020): 2099-2136.
@@ -82,3 +88,7 @@ The most valuable quality criteria for optimization studies in SE include sounde
 - Federica Sarro, Filomena Ferrucci, Mark Harman, Alessandra Manna and Jen Ren. Adaptive Multi-Objective Evolutionary Algorithms for Overtime Planning in Software Projects. IEEE Transactions on Software Engineering, vol. 43, no. 10, pp. 898-917, 1 Oct. 2017, DOI: https://doi.org/10.1109/TSE.2017.2650914.
 - José Campos, Yan Ge, Nasser Albunian, Gordon Fraser, Marcelo Eler and Andrea Arcuri. An empirical evaluation of evolutionary algorithms for unit test suite generation. Information and Software Technology. vol. 104, pp. 207–235, Aug. 2018. DOI: https://doi.org/10.1016/j.infsof.2018.08.010.
 - Annibale Panichella, Fitsum Meshesha Kifetew and Paolo Tonella. Automated Test Case Generation as a Many-Objective Optimisation Problem with Dynamic Selection of the Targets. IEEE Transactions on Software Engineering. vol. 44, no. 2, pp. 122–158, 2018. DOI: https://doi.org/10.1109/TSE.2017.2663435.
+
+## Notes
+
+**This standard is a living artifact.** We welcome pull requests with suggested edits to existing items, additional items in each category, suggested reading, and exemplar papers. 
