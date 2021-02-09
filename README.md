@@ -17,28 +17,31 @@ We stress that the use of optimization in SE is still a rapidly evolving field. 
 ### Essential
 <checklist name="Essential">
 
-- [ ] Describes the search space  (e.g., constraints, independent variables choices) and explains why the optimization problem cannot be solved manually or through a brute force enumeration of all solutions within a reasonable timeframe (e.g., if the cross-product of the space of options is very large or if the time required to perform a task manually is very slow). 
-- [ ] Includes a description of prior state of the art in this area, if it exists. If it does not, then this study must carefully motivate and define the problem tackled and the solution proposed. 
+- [ ] Describe the search space  (e.g., constraints, independent variables choices) and explains why the optimization problem cannot be solved manually or through a brute force enumeration of all solutions within a reasonable timeframe (e.g., if the cross-product of the space of options is very large or if the time required to perform a task manually is very slow). 
+- [ ] Do not over-simplify the optimization problem. In formulating the problem, simplifications and constraints should not reduce the search to one where all solutions could be enumerated through brute force.
+- [ ] Include a description of prior state of the art in this area, if it exists. If it does not, then this study must carefully motivate and define the problem tackled and the solution proposed. 
 - [ ] The algorithm underlying an approach (e.g., the specific metaheuristic) should be justified and appropriate for the problem being optimized. For example, do not use an algorithm such as Simulated Annealing, or even a specific approach such as NSGA-II, to solve an optimization problem unless it is actually appropriate for that problem. While one rarely knows the *best* approach for a new problem, one should at least consider the algorithms applied to address similar problems and make an informed judgement. 
-- [ ] Approaches are compared to a justified and appropriate baseline. If the approach addresses a problem never tackled before, then compare it to random search, at least. Otherwise, compare the proposed approach to the existing state of the art.
-- [ ] The solution formulation is explicitly defined, including a description of what a solution represents (e.g., a test suite or test case in test generation), how a solution is represented (e.g., a tree or vector structure), and how solutions are manipulated by the evaluated approaches. 
-- [ ] All fitness functions used are explicitly defined, including a description of the type of goals that are minimized or maximized and the equations for calculating the fitness value. 
-- [ ] The evaluated approaches are explicitly defined, including the applied techniques (e.g., Simulated Annealing, Genetic Algorithm), specific heuristics applied (e.g., single-point crossover), and the algorithm parameters and their values (e.g., crossover and mutation rates). 
+- [ ] Approaches must be compared to a justified and appropriate baseline. If the approach addresses a problem never tackled before, then compare it to random search, at least. Otherwise, compare the proposed approach to the existing state of the art.
+- [ ] The solution formulation must be explicitly defined, including a description of what a solution represents (e.g., a test suite or test case in test generation), how a solution is represented (e.g., a tree or vector structure), and how solutions are manipulated by the evaluated approaches. 
+- [ ] All fitness functions used must be explicitly defined, including a description of the type of goals that are minimized or maximized and the equations for calculating the fitness value. 
+- [ ] The evaluated approaches must be explicitly defined, including the applied techniques (e.g., Simulated Annealing, Genetic Algorithm), specific heuristics applied (e.g., single-point crossover), and the algorithm parameters and their values (e.g., crossover and mutation rates). 
 - [ ] The effects of stochasticity must be understood and accounted for at all levels (e.g., in the use of randomized algorithms, in fitness functions that measure a random variable from the environment, and in data sampling). 
 - [ ] Stochastic approaches must be executed multiple times, if this is not possible a justification should be provided (e.g., the approach is too slow, human-in-the-loop). 
 - [ ] One should sample from data multiple times in a controlled manner. 
 - [ ] Multiple trials can either be performed as a cross-validation (multiple independent executions) or temporally (multiple applications as part of a timed sequence) depeding on the problem at hand. 
 - [ ] Compare results using statistics that compare distributions, rather than comparing the mean.
 - [ ] When using statistics, favor non-parametric to parametric methods, as distributions are generally not known. Do not assume that data is normally distributed, unless you can provide an analysis showing normality. 
+- [ ] Threats to validity must be made explicit. In replication or reproduction studies, the threats of the original study must be either addressed or acknowledged as still being threats.
 
 </checklist>
 
 ### Desirable
 <checklist name="Desirable">
 
-- [ ] States if and how the study explores a new problem type (or a new area within an existing problem space) that has never been studied in the literature, or if the study reproduces and replicates prior work (and explains any small improvement). 
+- [ ] State if and how the study explores a new problem type (or a new area within an existing problem space) that has never been studied in the literature, or if the study reproduces and replicates prior work (and explains any small improvement). 
 - [ ] To enable open science, a replication package should be made available that conforms to SIGSOFT standards for artifacts. 
 - [ ] If data cannot be shared (e.g., industrial case study), it is desirable to create a sample dataset that can be shared to illustrate the use of the algorithms. 
+- [ ] The option space chosen from in formulating a solution should be realistic. For example, if setting a value for an attribute, that value should reflect one that might be chosen in a "real-world" solution, and not generated from an arbitrary distribution.
 - [ ] Provide justification for the parameter values used when executing the evaluated approaches (and note that experiments trying a wide range of different parameter values would be extraordinary, see below). 
 - [ ] Use an appropriate meta-evaluation criteria to compare solutions. For example, if applying a multi-objective optimization approach, then use a criterion that can analyze the Pareto frontier of solutions (e.g., generational distance and inverse generational distance). Regardless of the chosen criteria, provide a justification for that choice. 
 
@@ -77,12 +80,13 @@ The most valuable quality criteria for optimization studies in SE include sounde
 
 ## Suggested Readings
 
-- Amritanshu Agrawal, Tim Menzies, Leandro L. Minku, Markus Wagner, and Zhe Yu. 2020. Better software analytics via DUO: Data mining algorithms using/used-by optimizers." Empirical Software Engineering 25, no. 3. pp.2099-2136. https://doi.org/10.1007/s10664-020-09808-9
+- Amritanshu Agrawal, Tim Menzies, Leandro L. Minku, Markus Wagner, and Zhe Yu. 2020. Better software analytics via DUO: Data mining algorithms using/used-by optimizers." Empirical Software Engineering 25, no. 3. pp.2099-2136. DOI: https://doi.org/10.1007/s10664-020-09808-9
 - Shaukat Ali, Lionel C. Briand, Hadi Hemmati, Rajwinder Kaur Panesar-Walawege. 2010. A Systematic Review of the Application and Empirical Investigation of Search-Based Test Case Generation," in IEEE Transactions on Software Engineering, vol. 36, no. 6, pp. 742-762, https://doi.org/10.1109/TSE.2009.52
-- Andrea Arcuri and Lionel Briand. 2014. A Hitchhiker's guide to statistical tests for assessing randomized algorithms in software engineering. Softw. Test. Verif. Reliab. 24, 3, pp. 219–250. DOI:https://doi.org/10.1002/stvr.1486 
-- Mark Harman, Phil McMinn, Jerffeson Teixeira Souza, and Shin Yoo. 2011. Search-Based Software Engineering: Techniques, Taxonomy, Tutorial. Empirical Software Engineering and Verification. Lecture Notes in Computer Science, vol. 7007, pp. 1–59. https://doi.org/10.1007/978-3-642-25231-0_1
-- M. Li, T. Chen and X. Yao. 2020. How to Evaluate Solutions in Pareto-based Search-Based Software Engineering? A Critical Review and Methodological Guidance. In IEEE Transactions on Software Engineering, https://doi.org/10.1109/TSE.2020.3036108.
-- Guenther Ruhe. 2020. Optimization in Software Engineering - A Pragmatic Approach. In Felderer, M. and Travassos, G.H. eds., Contemporary Empirical Methods in Software Engineering, Springer. https://doi.org/10.1007/978-3-030-32489-6_9 
+- Andrea Arcuri and Lionel Briand. 2014. A Hitchhiker's guide to statistical tests for assessing randomized algorithms in software engineering. Softw. Test. Verif. Reliab. 24, 3, pp. 219–250. DOI: https://doi.org/10.1002/stvr.1486 
+- Mark Harman, Phil McMinn, Jerffeson Teixeira Souza, and Shin Yoo. 2011. Search-Based Software Engineering: Techniques, Taxonomy, Tutorial. Empirical Software Engineering and Verification. Lecture Notes in Computer Science, vol. 7007, pp. 1–59. DOI: https://doi.org/10.1007/978-3-642-25231-0_1
+- M. Li, T. Chen and X. Yao. 2020. How to Evaluate Solutions in Pareto-based Search-Based Software Engineering? A Critical Review and Methodological Guidance. In IEEE Transactions on Software Engineering. DOI: https://doi.org/10.1109/TSE.2020.3036108.
+- Guenther Ruhe. 2020. Optimization in Software Engineering - A Pragmatic Approach. In Felderer, M. and Travassos, G.H. eds., Contemporary Empirical Methods in Software Engineering, Springer. DOI: https://doi.org/10.1007/978-3-030-32489-6_9 
+- Norbert Siegmund, Stefan Sobernig, and Sven Apel. 2017. Attributed variability models: outside the comfort zone. In Proceedings of the 2017 11th Joint Meeting on Foundations of Software Engineering (ESEC/FSE 2017). Association for Computing Machinery, New York, NY, USA, 268–278. DOI: https://doi.org/10.1145/3106237.3106251
 
 ## Exemplars
 
