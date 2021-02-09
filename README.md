@@ -103,6 +103,8 @@ The most valuable quality criteria for optimization studies in SE include sounde
 
 ## Footnotes
 
-[^1] E.g., if the cross-product of the space of options is very large or if the time required to perform a task manually is very slow.
-[^2] For example, do not use an algorithm such as Simulated Annealing, or even a specific approach such as NSGA-II, to solve an optimization problem unless it is actually appropriate for that problem. While one rarely knows the *best* approach for a new problem, one should at least consider the algorithms applied to address similar problems and make an informed judgement. 
-[^3] For example, if applying a multi-objective optimization approach, then use a criterion that can analyze the Pareto frontier of solutions (e.g., generational distance and inverse generational distance)
+[^1]: E.g., if the cross-product of the space of options is very large or if the time required to perform a task manually is very slow.
+
+[^2]: For example, do not use an algorithm such as Simulated Annealing, or even a specific approach such as NSGA-II, to solve an optimization problem unless it is actually appropriate for that problem. While one rarely knows the *best* approach for a new problem, one should at least consider the algorithms applied to address similar problems and make an informed judgement. 
+
+[^3]: For example, if applying a multi-objective optimization approach, then use a criterion that can analyze the Pareto frontier of solutions (e.g., generational distance and inverse generational distance)
