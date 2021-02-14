@@ -1,8 +1,8 @@
 # Optimization Studies in SE (including Search-Based Software Engineering)
 <standard name="Optimization Studies in SE (including Search-Based Software Engineering)">
 
-Research studies that focus on the formulation of software engineering problems as search problems, and apply optimization techniques (e.g., metaheuristics and evolutionary algorithms) to solve such problems.
-
+Research studies that focus on the formulation of software engineering problems as search problems, and apply optimization techniques   to solve such problems. Note that
+there are many such optimization techniques (metaheuristic; numerical optimizers;  constraint solving theorem provers SAT,SMT,CSP; and other), some of which are stochastic.  
 ## Application
 
 This standard applies to empirical studies that meet the following criteria:
@@ -20,14 +20,14 @@ We stress that the use of optimization in SE is still a rapidly evolving field. 
 - [ ] Describe the search space  (e.g., constraints, independent variables choices) and explains why the optimization problem cannot be solved manually or through a brute force enumeration of all solutions within a reasonable timeframe<sup>[1](#footnote1)</sup>. 
 - [ ] Do not over-simplify the optimization problem. In formulating the problem, simplifications and constraints should not reduce the search to one where all solutions could be enumerated through brute force.
 - [ ] Include a description of prior state of the art in this area, if it exists. If it does not, then this study must carefully motivate and define the problem tackled and the solution proposed. 
-- [ ] The algorithm underlying an approach (e.g., the specific metaheuristic) should be justified and appropriate for the problem being optimized<sup>[2](#footnote2)</sup>.
+- [ ] The algorithm underlying an approach (e.g., the numerical optimizer, the specific metaheuristic, the constraint solving method, etc ) should be justified and appropriate for the problem being optimized<sup>[2](#footnote2)</sup>.
 - [ ] Approaches must be compared to a justified and appropriate baseline. If the approach addresses a problem never tackled before, then it should be compared - at least - to random search. Otherwise, compare the proposed approach to the existing state of the art.
 - [ ] The solution formulation must be explicitly defined, including a description of what a solution represents (e.g., a test suite or test case in test generation), how a solution is represented (e.g., a tree or vector structure), and how solutions are manipulated by the evaluated approaches. 
 - [ ] All fitness functions used must be explicitly defined, including a description of the type of goals that are minimized or maximized and the equations for calculating the fitness value. 
 - [ ] The evaluated approaches must be explicitly defined, including the applied techniques (e.g., Simulated Annealing, Genetic Algorithm), specific heuristics applied (e.g., single-point crossover), and the algorithm parameters and their values (e.g., crossover and mutation rates). 
 - [ ] The effects of stochasticity must be understood and accounted for at all levels (e.g., in the use of randomized algorithms, in fitness functions that measure a random variable from the environment, and in data sampling). 
 - [ ] Stochastic approaches must be executed multiple times. If this is not possible, a justification should be provided (e.g., the approach is too slow, human-in-the-loop). 
-- [ ] One should sample from data multiple times in a controlled manner. 
+- [ ] One should sample from data multiple times in a controlled manner (where appropriate and possible).
 - [ ] Multiple trials can either be performed as a cross-validation (multiple independent executions) or temporally (multiple applications as part of a timed sequence), depeding on the problem at hand. 
 - [ ] Compare results using statistics that compare distributions, rather than comparing the mean.
 - [ ] When using statistics, favor non-parametric to parametric methods, as distributions are generally not known. Do not assume that data is normally distributed, unless you can provide an analysis showing normality. 
@@ -66,7 +66,7 @@ The most valuable quality criteria for optimization studies in SE include sounde
 ## Antipatterns
 
 - Significance tests (e.g., Mann-Whitney Wilcoxon test) are used without effect size tests. 
-   - "Significance" tests if distributions can be distingused from each other. But "Effect size" tests are required to check if the difference between distributions is "interesting" and not just a trivially "small effect".
+  For more these two tests, see **Notes**
 - Multiple trials conducted, but no disclosure or discussion on the variation between trials. Reporting a median, without any indication of variance (e.g., a boxplot), does not indicate potential variation between each trial.
 
 ## Invalid Criticisms
@@ -80,26 +80,55 @@ The most valuable quality criteria for optimization studies in SE include sounde
 
 ## Suggested Readings
 
-- Amritanshu Agrawal, Tim Menzies, Leandro L. Minku, Markus Wagner, and Zhe Yu. 2020. Better software analytics via DUO: Data mining algorithms using/used-by optimizers." Empirical Software Engineering 25, no. 3. pp.2099-2136. DOI: https://doi.org/10.1007/s10664-020-09808-9
-- Shaukat Ali, Lionel C. Briand, Hadi Hemmati, Rajwinder Kaur Panesar-Walawege. 2010. A Systematic Review of the Application and Empirical Investigation of Search-Based Test Case Generation," in IEEE Transactions on Software Engineering, vol. 36, no. 6, pp. 742-762, DOI: https://doi.org/10.1109/TSE.2009.52
 - Andrea Arcuri and Lionel Briand. 2014. A Hitchhiker's guide to statistical tests for assessing randomized algorithms in software engineering. Softw. Test. Verif. Reliab. 24, 3, pp. 219–250. DOI: https://doi.org/10.1002/stvr.1486 
+- Amritanshu Agrawal, Tim Menzies, Leandro L. Minku, Markus Wagner, and Zhe Yu. 2020. Better software analytics via DUO: Data mining algorithms using/used-by optimizers." Empirical Software Engineering 25, no. 3. pp.2099-2136. DOI: https://doi.org/10.1007/s10664-020-09808-9
+- Efron, Bradley, and Robert J. Tibshirani. An introduction to the bootstrap. CRC press, 1994
 - Mark Harman, Phil McMinn, Jerffeson Teixeira Souza, and Shin Yoo. 2011. Search-Based Software Engineering: Techniques, Taxonomy, Tutorial. Empirical Software Engineering and Verification. Lecture Notes in Computer Science, vol. 7007, pp. 1–59. DOI: https://doi.org/10.1007/978-3-642-25231-0_1
+- Vigdis By Kampenes, Tore Dybå, Jo E. Hannay, and Dag I. K. Sjøberg. 2007. Systematic review: A systematic review of effect size in software engineering experiments. Inf. Softw. Technol. 49, 11–12 (November, 2007), 1073–1086. DOI:https://doi.org/10.1016/j.infsof.2007.02.015
 - M. Li, T. Chen and X. Yao. 2020. How to Evaluate Solutions in Pareto-based Search-Based Software Engineering? A Critical Review and Methodological Guidance. In IEEE Transactions on Software Engineering. DOI: https://doi.org/10.1109/TSE.2020.3036108.
-- Guenther Ruhe. 2020. Optimization in Software Engineering - A Pragmatic Approach. In Felderer, M. and Travassos, G.H. eds., Contemporary Empirical Methods in Software Engineering, Springer. DOI: https://doi.org/10.1007/978-3-030-32489-6_9 
-- Norbert Siegmund, Stefan Sobernig, and Sven Apel. 2017. Attributed variability models: outside the comfort zone. In Proceedings of the 2017 11th Joint Meeting on Foundations of Software Engineering (ESEC/FSE 2017). Association for Computing Machinery, New York, NY, USA, 268–278. DOI: https://doi.org/10.1145/3106237.3106251
+- Nikolaos Mittas and Lefteris Angelis. Ranking and clustering software cost estimation models through a multiple comparisons algorithm. IEEE Trans. Software Eng.,
+39(4):537–551, 2013.
+- Guenther Ruhe. 2020. Optimization in Software Engineering - A Pragmatic Approach. In  Felderer, M. and Travassos, G.H. eds., Contemporary Empirical Methods in Software Engineering, Springer. DOI: https://doi.org/10.1007/978-3-030-32489-6_9
+- Shaukat Ali, Lionel C. Briand, Hadi Hemmati, Rajwinder Kaur Panesar-Walawege. 2010. A Systematic Review of the Application and Empirical Investigation of Search-Based Test Case Generation," in IEEE Transactions on Software Engineering, vol. 36, no. 6, pp. 742-762, DOI: https://doi.org/10.1109/TSE.2009.52
+
+
 
 ## Exemplars
 
+2020:
+
 - Hussein Almulla, Gregory Gay. 2020. Learning How to Search: Generating Exception-Triggering Tests Through Adaptive Fitness Function Selection. In Proceedings of 13th IEEE International Conference on Software Testing (ICST’20). IEEE, 63-73. DOI: https://doi.org/10.1109/ICST46399.2020.00017 
+- Jianfeng Chen, Vivek Nair, Rahul Krishna, Tim Menzies. “Sampling” as a Baseline Optimizer for Search-Based Software Engineering. IEEE Transactions on Software Engineering 2019 45(6), 2019. DOI: https://doi.org/10.1109/TSE.2018.279092
+
+2018:
+
 - José Campos, Yan Ge, Nasser Albunian, Gordon Fraser, Marcelo Eler and Andrea Arcuri. 2018. An empirical evaluation of evolutionary algorithms for unit test suite generation. Information and Software Technology. vol. 104, pp. 207–235. DOI: https://doi.org/10.1016/j.infsof.2018.08.010
-- Jianfeng Chen, Vivek Nair, Rahul Krishna, Tim Menzies. “Sampling” as a Baseline Optimizer for Search-Based Software Engineering. IEEE Transactions on Software Engineering 2019 45(6), 2019. DOI: https://doi.org/10.1109/TSE.2018.2790925
 - Annibale Panichella, Fitsum Meshesha Kifetew and Paolo Tonella. 2018. Automated Test Case Generation as a Many-Objective Optimisation Problem with Dynamic Selection of the Targets. IEEE Transactions on Software Engineering. vol. 44, no. 2, pp. 122–158. DOI: https://doi.org/10.1109/TSE.2017.2663435
-- Federica Sarro, Alessio Petrozziello, and Mark Harman. 2016. Multi-objective software effort estimation. In Proceedings of the 38th International Conference on Software Engineering (ICSE'16). Association for Computing Machinery, New York, NY, USA, 619–630. DOI: https://doi.org/10.1145/2884781.2884830
+
+2017:
+
+- Norbert Siegmund, Stefan Sobernig, and Sven Apel. 2017. Attributed variability models: outside the comfort zone. In Proceedings of the 2017 11th Joint Meeting on Foundations of Software Engineering (ESEC/FSE 2017). Association for Computing Machinery, New York, NY, USA, 268–278. DOI: https://doi.org/10.1145/3106237.3106251
 - Federica Sarro, Filomena Ferrucci, Mark Harman, Alessandra Manna and Jen Ren.  2017. Adaptive Multi-Objective Evolutionary Algorithms for Overtime Planning in Software Projects. IEEE Transactions on Software Engineering, vol. 43, no. 10, pp. 898-917. DOI: https://doi.org/10.1109/TSE.2017.2650914
+- G. Mathew, T. Menzies, N. Ernst and J. Klein,  "SHORTâ€er Reasoning About Larger Requirements Models," in 2017 IEEE 25th International Requirements Engineering Conference (RE), Lisbon, Portugal, 2017 pp. 154-163. doi: 10.1109/RE.2017.3
+
+2016
+
+- Federica Sarro, Alessio Petrozziello, and Mark Harman. 2016. Multi-objective software effort estimation. In Proceedings of the 38th International Conference on Software Engineering (ICSE'16). Association for Computing Machinery, New York, NY, USA, 619–630. DOI: https://doi.org/10.1145/2884781.2884830
+
+
+2002:
+
+- Feather, Martin S., and Tim Menzies. "Converging on the optimal attainment of requirements." Proceedings IEEE Joint International Conference on Requirements Engineering. IEEE, 2002.
 
 ## Notes
 
-**This standard is a living artifact.** We welcome pull requests with suggested edits to existing items, additional items in each category, suggested reading, and exemplar papers. 
+
+**This standard is a living artifact.** We welcome pull requests with suggested edits to 
+existing items, additional items in each category, suggested reading, and exemplar papers. 
+
+Regarding the difference between "significance" and "effect size" tests: "Significance" checks if distributions can be distinguished from each other while "Effect size" tests are required to check if the difference between distributions is "interesting" (and not just a trivially "small effect"). These tests can be parametric or non-parametric. For example, the parametric t-test/Hedges significance/effect tests endorsed by Kampenese et al. are coded up at https://tinyurl.com/y4o7ucnx.  Also a parametric Scott-Knot/Cohen test of the kind endorsed by Mittas et al. is coded at https://tinyurl.com/y5tg37fp. The non-parametric bootstrap/Cliffs Delta significant/effect tests of the   kind endorsed by  Efron et al. and Arcuri et al.
+is coded at https://tinyurl.com/y2ufofgu.  
+
 
 ## Footnotes
 
