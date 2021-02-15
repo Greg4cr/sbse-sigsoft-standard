@@ -2,7 +2,7 @@
 <standard name="Optimization Studies in SE (including Search-Based Software Engineering)">
 
 Research studies that focus on the formulation of software engineering problems as search problems, and apply optimization techniques   to solve such problems. Note that
-there are many such optimization techniques (metaheuristic; numerical optimizers;  constraint solving theorem provers SAT,SMT,CSP; and other), some of which are stochastic.  
+there are many such optimization techniques (metaheuristic; numerical optimizers; constraint solving theorem provers SAT,SMT,CSP; and other), some of which are stochastic.  
 ## Application
 
 This standard applies to empirical studies that meet the following criteria:
@@ -26,8 +26,8 @@ We stress that the use of optimization in SE is still a rapidly evolving field. 
 - [ ] All fitness functions used must be explicitly defined, including a description of the type of goals that are minimized or maximized and the equations for calculating the fitness value. 
 - [ ] The evaluated approaches must be explicitly defined, including the applied techniques (e.g., Simulated Annealing, Genetic Algorithm), specific heuristics applied (e.g., single-point crossover), and the algorithm parameters and their values (e.g., crossover and mutation rates). 
 - [ ] Follow a sound process to collect and prepare the subjects (e.g., software artefacts, datasets) used to run and to evaluate the optimisation approach, and clearly describe it. If the subjects are taken from previous work, fully reference the original source and explain whether any transformation was applied to the subjects (e.g., data cleaning). Otherwise, clearly describe the collection process and wherever possible make the subjects publicly available or explain why this is not possible (e.g., proprietary data, ethics issues, under a Non-Disclosure Agreement).
-- [ ] The effects of stochasticity must be understood and accounted for at all levels (e.g., in the use of randomized algorithms, in fitness functions that measure a random variable from the environment, and in data sampling). 
-- [ ] Stochastic approaches must be executed multiple times. If this is not possible, a justification should be provided (e.g., the approach is too slow, human-in-the-loop). 
+- [ ] All possible sources of stochasticity need to be identified, explained and accounted for by executing multiple repetition for each source where possible (otherwise, explain why this is not possible). For example, stochasticity may arise from the use of randomized algorithms, from the use of a fitness function that measures a random variable from the environment (e.g., a fitness function based on execution time may return different results across different executions), from the use of data sampling or cross-validation approaches.
+- [ ] Stochastic approaches must be executed multiple times. If this is not possible, a justification should be provided (e.g., the approach is too slow, human-in-the-loop).
 - [ ] One should sample from data multiple times in a controlled manner (where appropriate and possible).
 - [ ] Multiple trials can either be performed as a cross-validation (multiple independent executions) or temporally (multiple applications as part of a timed sequence), depeding on the problem at hand. 
 - [ ] Compare results using statistics that compare distributions, rather than comparing the mean.
