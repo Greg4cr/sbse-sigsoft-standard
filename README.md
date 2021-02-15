@@ -1,8 +1,7 @@
 # Optimization Studies in SE (including Search-Based Software Engineering)
 <standard name="Optimization Studies in SE (including Search-Based Software Engineering)">
 
-Research studies that focus on the formulation of software engineering problems as search problems, and apply optimization techniques   to solve such problems. Note that
-there are many such optimization techniques (metaheuristic; numerical optimizers; constraint solving theorem provers SAT,SMT,CSP; and other), some of which are stochastic.  
+Research studies that focus on the formulation of software engineering problems as search problems, and apply optimization techniques   to solve such problems. Note that there are many such optimization techniques (metaheuristic; numerical optimizers; constraint solving theorem provers SAT,SMT,CSP; and other), some of which are stochastic.  
 ## Application
 
 This standard applies to empirical studies that meet the following criteria:
@@ -26,7 +25,7 @@ We stress that the use of optimization in SE is still a rapidly evolving field. 
 - [ ] All fitness functions used must be explicitly defined, including a description of the type of goals that are minimized or maximized and the equations for calculating the fitness value. 
 - [ ] The evaluated approaches must be explicitly defined, including the applied techniques (e.g., Simulated Annealing, Genetic Algorithm), specific heuristics applied (e.g., single-point crossover), and the algorithm parameters and their values (e.g., crossover and mutation rates). 
 - [ ] Follow a sound process to collect and prepare the subjects (e.g., software artefacts, datasets) used to run and to evaluate the optimisation approach, and clearly describe it. If the subjects are taken from previous work, fully reference the original source and explain whether any transformation was applied to the subjects (e.g., data cleaning). Otherwise, clearly describe the collection process and wherever possible make the subjects publicly available or explain why this is not possible (e.g., proprietary data, ethics issues, under a Non-Disclosure Agreement).
-- [ ] All possible sources of stochasticity need to be identified, explained and accounted for by executing multiple repetition for each source where possible (otherwise, explain why this is not possible). For example, stochasticity may arise from the use of randomized algorithms, from the use of a fitness function that measures a random variable from the environment (e.g., a fitness function based on execution time may return different results across different executions), from the use of data sampling or cross-validation approaches.
+- [ ] All possible sources of stochasticity need to be identified, explained and accounted for by executing multiple repetition for each source where possible (otherwise, explain why this is not possible).<sup>[3](#footnote3)</sup>.
 - [ ] Stochastic approaches must be executed multiple times. If this is not possible, a justification should be provided (e.g., the approach is too slow, human-in-the-loop).
 - [ ] One should sample from data multiple times in a controlled manner (where appropriate and possible).
 - [ ] Multiple trials can either be performed as a cross-validation (multiple independent executions) or temporally (multiple applications as part of a timed sequence), depeding on the problem at hand. 
@@ -45,7 +44,7 @@ We stress that the use of optimization in SE is still a rapidly evolving field. 
 - [ ] If data cannot be shared (e.g., industrial case study), it is desirable to create a sample dataset that can be shared to illustrate the use of the algorithms. 
 - [ ] The option space chosen from in formulating a solution should be realistic. If setting a value for an attribute, that value should reflect one that might be chosen in a "real-world" solution, and not generated from an arbitrary distribution.
 - [ ] Provide justification for the parameter values used when executing the evaluated approaches (and note that experiments trying a wide range of different parameter values would be extraordinary, see below). 
-- [ ] Use an appropriate meta-evaluation criteria to compare solutions<sup>[3](#footnote3)</sup>. Regardless of the chosen criteria, provide a justification for that choice. 
+- [ ] Use an appropriate meta-evaluation criteria to compare solutions<sup>[4](#footnote4)</sup>. Regardless of the chosen criteria, provide a justification for that choice. 
 
 </checklist>
 
@@ -68,7 +67,7 @@ The most valuable quality criteria for optimization studies in SE include sounde
 ## Antipatterns
 
 - Significance tests (e.g., Mann-Whitney Wilcoxon test) are used without effect size tests. 
-  For more these two tests, see **Notes**
+  For more on these two tests, see **Notes**
 - Multiple trials conducted, but no disclosure or discussion on the variation between trials. Reporting a median, without any indication of variance (e.g., a boxplot), does not indicate potential variation between each trial.
 
 ## Invalid Criticisms
@@ -112,9 +111,9 @@ The most valuable quality criteria for optimization studies in SE include sounde
 
 2017:
 
-- Norbert Siegmund, Stefan Sobernig, and Sven Apel. 2017. Attributed variability models: outside the comfort zone. In Proceedings of the 2017 11th Joint Meeting on Foundations of Software Engineering (ESEC/FSE 2017). Association for Computing Machinery, New York, NY, USA, 268–278. DOI: https://doi.org/10.1145/3106237.3106251
+- Norbert Siegmund, Stefan Sobernig, and Sven Apel. 2017. Attributed variability models: outside the comfort zone. In Proceedings of the 2017 11th Joint Meeting on Foundations of Software Engineering (ESEC/FSE. Association for Computing Machinery, New York, NY, USA, 268–278. DOI: https://doi.org/10.1145/3106237.3106251
 - Federica Sarro, Filomena Ferrucci, Mark Harman, Alessandra Manna and Jen Ren.  2017. Adaptive Multi-Objective Evolutionary Algorithms for Overtime Planning in Software Projects. IEEE Transactions on Software Engineering, vol. 43, no. 10, pp. 898-917. DOI: https://doi.org/10.1109/TSE.2017.2650914
-- G. Mathew, T. Menzies, N. Ernst and J. Klein,  "SHORTâ€er Reasoning About Larger Requirements Models," in 2017 IEEE 25th International Requirements Engineering Conference (RE), Lisbon, Portugal, 2017 pp. 154-163. doi: 10.1109/RE.2017.3
+- G. Mathew, T. Menzies, N. Ernst and J. Klein. 2017.  "SHORT"er Reasoning About Larger Requirements Models. In 2017 IEEE 25th International Requirements Engineering Conference (RE), Lisbon, Portugal, pp. 154-163. doi: 10.1109/RE.2017.3
 
 2016
 
@@ -140,4 +139,6 @@ is coded at https://tinyurl.com/y2ufofgu.
 
 <sup><a name="footnote2">2</a></sup>: For example, do not use an algorithm such as Simulated Annealing, or even a specific approach such as NSGA-II, to solve an optimization problem unless it is actually appropriate for that problem. While one rarely knows the *best* approach for a new problem, one should at least consider the algorithms applied to address similar problems and make an informed judgement. 
 
-<sup><a name="footnote3">3</a></sup>: For example, if applying a multi-objective optimization approach, then use a criterion that can analyze the Pareto frontier of solutions (e.g., generational distance and inverse generational distance)
+<sup><a name="footnote3">3</a></sup>: For example, stochasticity may arise from the use of randomized algorithms, from the use of a fitness function that measures a random variable from the environment (e.g., a fitness function based on execution time may return different results across different executions), from the use of data sampling or cross-validation approaches.
+
+<sup><a name="footnote4">4</a></sup>: For example, if applying a multi-objective optimization approach, then use a criterion that can analyze the Pareto frontier of solutions (e.g., generational distance and inverse generational distance)
