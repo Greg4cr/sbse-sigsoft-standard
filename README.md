@@ -29,7 +29,7 @@ We stress that the use of optimization in SE is still a rapidly evolving field. 
 - [ ] All possible sources of stochasticity need to be identified, explained and accounted for by executing multiple repetition for each source where possible (otherwise, explain why this is not possible)<sup>[12](#footnote12)</sup>.
 - [ ] Stochastic approaches must be executed multiple times. If this is not possible, a justification should be provided<sup>[13](#footnote13)</sup>.
 - [ ] One should sample from data multiple times in a controlled manner (where appropriate and possible).
-- [ ] Multiple trials can either be performed as a cross-validation (multiple independent executions) or temporally (multiple applications as part of a timed sequence), depeding on the problem at hand. 
+- [ ] Multiple trials can either be performed as a cross-validation (multiple independent executions) or temporally (multiple applications as part of a timed sequence), depending on the problem at hand. 
 - [ ] Compare results using statistics that compare distributions, rather than comparing the mean.
 - [ ] When using statistics, favor non-parametric to parametric methods, as distributions are generally not known. Do not assume that data is normally distributed, unless you can provide an analysis showing normality. 
 - [ ] Threats to validity must be made explicit. In replication or reproduction studies, the threats of the original study must be either addressed or acknowledged as still being threats.
