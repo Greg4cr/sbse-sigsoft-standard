@@ -20,13 +20,13 @@ We stress that the use of optimization in SE is still a rapidly evolving field. 
 - [ ] Describe the search space  (e.g., constraints, independent variables choices) and explains why the optimization problem cannot be solved manually or through a brute force enumeration of all solutions within a reasonable timeframe<sup>[4](#footnote4)</sup>. 
 - [ ] Use realistic and limited simplifications and constraints for the optimization problem. Simplifications and constraints must not reduce the search to one where all solutions could be enumerated through brute force.
 - [ ] Either include a description of prior state of the art in this area or carefully motivate and define the problem tackled and the solution proposed. 
-- [ ] The algorithm underlying an approach (e.g., the numerical optimizer, the specific metaheuristic, the constraint solving method, etc ) should be justified and appropriate for the problem being optimized<sup>[5](#footnote5)</sup>.
+- [ ] The algorithm underlying an approach<sup>[5](#footnote5)</sup> should be justified and appropriate for the problem being optimized<sup>[6](#footnote6)</sup>.
 - [ ] Approaches must be compared to a justified and appropriate baseline. If the approach addresses a problem never tackled before, then it should be compared - at least - to random search. Otherwise, compare the proposed approach to the existing state of the art.
 - [ ] The solution formulation must be explicitly defined, including a description of what a solution represents (e.g., a test suite or test case in test generation), how a solution is represented (e.g., a tree or vector structure), and how solutions are manipulated by the evaluated approaches. 
 - [ ] All fitness functions used must be explicitly defined, including a description of the type of goals that are minimized or maximized and the equations for calculating the fitness value. 
 - [ ] The evaluated approaches must be explicitly defined, including the applied techniques (e.g., Simulated Annealing, Genetic Algorithm), specific heuristics applied (e.g., single-point crossover), and the algorithm parameters and their values (e.g., crossover and mutation rates). 
 - [ ] Follow a sound process to collect and prepare the subjects (e.g., software artefacts, datasets) used to run and to evaluate the optimisation approach, and clearly describe it. If the subjects are taken from previous work, fully reference the original source and explain whether any transformation was applied to the subjects (e.g., data cleaning). Otherwise, clearly describe the collection process and wherever possible make the subjects publicly available or explain why this is not possible (e.g., proprietary data, ethics issues, under a Non-Disclosure Agreement).
-- [ ] All possible sources of stochasticity need to be identified, explained and accounted for by executing multiple repetition for each source where possible (otherwise, explain why this is not possible).<sup>[6](#footnote6)</sup>
+- [ ] All possible sources of stochasticity need to be identified, explained and accounted for by executing multiple repetition for each source where possible (otherwise, explain why this is not possible).<sup>[7](#footnote7)</sup>
 - [ ] Stochastic approaches must be executed multiple times. If this is not possible, a justification should be provided (e.g., the approach is too slow, human-in-the-loop).
 - [ ] One should sample from data multiple times in a controlled manner (where appropriate and possible).
 - [ ] Multiple trials can either be performed as a cross-validation (multiple independent executions) or temporally (multiple applications as part of a timed sequence), depeding on the problem at hand. 
@@ -45,7 +45,7 @@ We stress that the use of optimization in SE is still a rapidly evolving field. 
 - [ ] If data cannot be shared (e.g., industrial case study), it is desirable to create a sample dataset that can be shared to illustrate the use of the algorithms. 
 - [ ] The option space chosen from in formulating a solution should be realistic. If setting a value for an attribute, that value should reflect one that might be chosen in a "real-world" solution, and not generated from an arbitrary distribution.
 - [ ] Provide justification for the parameter values used when executing the evaluated approaches (and note that experiments trying a wide range of different parameter values would be extraordinary, see below). 
-- [ ] Use an appropriate meta-evaluation criteria to compare solutions<sup>[7](#footnote7)</sup>. Regardless of the chosen criteria, provide a justification for that choice. 
+- [ ] Use an appropriate meta-evaluation criteria to compare solutions<sup>[8](#footnote8)</sup>. Regardless of the chosen criteria, provide a justification for that choice. 
 
 </checklist>
 
@@ -144,8 +144,10 @@ is coded at https://tinyurl.com/y2ufofgu.
 
 <sup><a name="footnote4">4</a></sup>: E.g., if the cross-product of the space of options is very large or if the time required to perform a task manually is very slow.
 
-<sup><a name="footnote5">5</a></sup>: For example, do not use an algorithm such as Simulated Annealing, or even a specific approach such as NSGA-II, to solve an optimization problem unless it is actually appropriate for that problem. While one rarely knows the *best* approach for a new problem, one should at least consider the algorithms applied to address similar problems and make an informed judgement. 
+<sup><a name="footnote5">5</a></sup>: E.g., the numerical optimizer, the specific metaheuristic, the constraint solving method, etc.
 
-<sup><a name="footnote6">6</a></sup>: For example, stochasticity may arise from the use of randomized algorithms, from the use of a fitness function that measures a random variable from the environment (e.g., a fitness function based on execution time may return different results across different executions), from the use of data sampling or cross-validation approaches.
+<sup><a name="footnote6">6</a></sup>: For example, do not use an algorithm such as Simulated Annealing, or even a specific approach such as NSGA-II, to solve an optimization problem unless it is actually appropriate for that problem. While one rarely knows the *best* approach for a new problem, one should at least consider the algorithms applied to address similar problems and make an informed judgement. 
 
-<sup><a name="footnote7">7</a></sup>: For example, if applying a multi-objective optimization approach, then use a criterion that can analyze the Pareto frontier of solutions (e.g., generational distance and inverse generational distance)
+<sup><a name="footnote7">7</a></sup>: For example, stochasticity may arise from the use of randomized algorithms, from the use of a fitness function that measures a random variable from the environment (e.g., a fitness function based on execution time may return different results across different executions), from the use of data sampling or cross-validation approaches.
+
+<sup><a name="footnote8">8</a></sup>: For example, if applying a multi-objective optimization approach, then use a criterion that can analyze the Pareto frontier of solutions (e.g., generational distance and inverse generational distance)
