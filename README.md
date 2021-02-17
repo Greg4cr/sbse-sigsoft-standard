@@ -19,7 +19,7 @@ We stress that the use of optimization in SE is still a rapidly evolving field. 
 
 - [ ] Describe the search space  (e.g., constraints, independent variables choices) and explains why the optimization problem cannot be solved manually or through a brute force enumeration of all solutions within a reasonable timeframe<sup>[4](#footnote4)</sup>. 
 - [ ] Use realistic and limited simplifications and constraints for the optimization problem. Simplifications and constraints must not reduce the search to one where all solutions could be enumerated through brute force.
-- [ ] Include a description of prior state of the art in this area, if it exists. If it does not, then this study must carefully motivate and define the problem tackled and the solution proposed. 
+- [ ] Either include a description of prior state of the art in this area or carefully motivate and define the problem tackled and the solution proposed. 
 - [ ] The algorithm underlying an approach (e.g., the numerical optimizer, the specific metaheuristic, the constraint solving method, etc ) should be justified and appropriate for the problem being optimized<sup>[5](#footnote5)</sup>.
 - [ ] Approaches must be compared to a justified and appropriate baseline. If the approach addresses a problem never tackled before, then it should be compared - at least - to random search. Otherwise, compare the proposed approach to the existing state of the art.
 - [ ] The solution formulation must be explicitly defined, including a description of what a solution represents (e.g., a test suite or test case in test generation), how a solution is represented (e.g., a tree or vector structure), and how solutions are manipulated by the evaluated approaches. 
