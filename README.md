@@ -31,8 +31,6 @@ We stress that the use of optimization in SE is still a rapidly evolving field. 
 - [ ] One should sample from data multiple times in a controlled manner (where appropriate and possible).
 - [ ] Multiple trials can either be performed as a cross-validation (multiple independent executions) or temporally (multiple applications as part of a timed sequence), depending on the problem at hand. 
 - [ ] Compare results using statistics that compare distributions, rather than comparing the mean.
-- [ ] When using statistics, favor non-parametric to parametric methods, as distributions are generally not known. Do not assume that data is normally distributed, unless you can provide an analysis showing normality. 
-- [ ] Threats to validity must be made explicit. In replication or reproduction studies, the threats of the original study must be either addressed or acknowledged as still being threats.
 
 </checklist>
 
