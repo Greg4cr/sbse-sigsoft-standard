@@ -18,7 +18,7 @@ We stress that the use of optimization in SE is still a rapidly evolving field. 
 <checklist name="Essential">
 
 - [ ] Describe the search space  (e.g., constraints, independent variables choices) and explains why the optimization problem cannot be solved manually or through a brute force enumeration of all solutions within a reasonable timeframe<sup>[4](#footnote4)</sup>. 
-- [ ] Do not over-simplify the optimization problem. In formulating the problem, simplifications and constraints should not reduce the search to one where all solutions could be enumerated through brute force.
+- [ ] Use realistic and limited simplifications and constraints for the optimization problem. Simplifications and constraints must not reduce the search to one where all solutions could be enumerated through brute force.
 - [ ] Include a description of prior state of the art in this area, if it exists. If it does not, then this study must carefully motivate and define the problem tackled and the solution proposed. 
 - [ ] The algorithm underlying an approach (e.g., the numerical optimizer, the specific metaheuristic, the constraint solving method, etc ) should be justified and appropriate for the problem being optimized<sup>[5](#footnote5)</sup>.
 - [ ] Approaches must be compared to a justified and appropriate baseline. If the approach addresses a problem never tackled before, then it should be compared - at least - to random search. Otherwise, compare the proposed approach to the existing state of the art.
