@@ -12,7 +12,7 @@ This standard applies to empirical studies that meet the following criteria:
 
 ## Specific Attributes
 
-We stress that the use of optimization in SE is still a rapidly evolving field. Hence, the following criteria are approximate and many exceptions exist to these criteria. Reviewers should reward sound and novel work and, where possible, support a diverse range of studies.
+We stress that the use of optimization in SE is still a rapidly evolving field. Hence, the following criteria are approximate and there may exist many exceptions to them. Reviewers should reward sound and novel work and, where possible, support a diverse range of studies.
 
 ### Essential
 <checklist name="Essential">
@@ -26,7 +26,7 @@ We stress that the use of optimization in SE is still a rapidly evolving field. 
 - [ ] All fitness functions used must be explicitly defined, including a description of the type of goals that are minimized or maximized and the equations for calculating the fitness value. 
 - [ ] The evaluated approaches must be explicitly defined, including the applied techniques, specific heuristics applied, and the algorithm parameters and their values<sup>[10](#footnote10)</sup>. 
 - [ ] Follow and clearly describe a sound process to collect and prepare the datasets used to run and to evaluate the optimization approach. If the subjects are taken from previous work, fully reference the original source and explain whether any transformation or cleaning was applied to the datasets. Otherwise, clearly describe the collection process and, wherever possible, make the subjects publicly available or explain why this is not possible<sup>[11](#footnote11)</sup>.
-- [ ] All possible sources of stochasticity need to be identified, explained and accounted for by executing multiple repetition for each source where possible (otherwise, explain why this is not possible)<sup>[12](#footnote12)</sup>.
+- [ ] All possible sources of stochasticity need to be identified, explained and accounted for by executing multiple repetitions for each source where possible (otherwise, explain why this is not possible)<sup>[12](#footnote12)</sup>.
 - [ ] Stochastic approaches must be executed multiple times. If this is not possible, a justification should be provided<sup>[13](#footnote13)</sup>.
 - [ ] One should sample from data multiple times in a controlled manner (where appropriate and possible).
 - [ ] Multiple trials can either be performed as a cross-validation (multiple independent executions) or temporally (multiple applications as part of a timed sequence), depending on the problem at hand. 
@@ -38,7 +38,7 @@ We stress that the use of optimization in SE is still a rapidly evolving field. 
 <checklist name="Desirable">
 
 - [ ] State if and how the study explores a new problem type (or a new area within an existing problem space) that has never been studied in the literature, or if the study reproduces and replicates prior work (and explains any small improvement). 
-- [ ] Provide a detailed explanation on how subjects or datasets were collected and chosen in order to mitigate selection bias and improve the generalization of the findings. Describe the main features of the subjects used to run and evaluate the optimization approach(es) and discuss what characterizes the different instances in terms of "hardness". In case of data-driven approaches, if random data splits are used, this should be made publicly available or at least reproducibile. In case of synthetic data, clearly explain why real-world data cannot be used, and to what extend the proposed approach and the findings can be applicable to a real-world setting.
+- [ ] Provide a detailed explanation on how subjects or datasets were collected and chosen in order to mitigate selection bias and improve the generalization of the findings. Describe the main features of the subjects used to run and evaluate the optimization approach(es) and discuss what characterizes the different instances in terms of "hardness". In case of data-driven approaches, if random data splits are used, this should be made publicly available or at least reproducibile. In case of synthetic data, clearly explain why real-world data cannot be used, and to what extent the proposed approach and the findings can be applicable to a real-world setting.
 - [ ] To enable open science, a replication package should be made available that conforms to SIGSOFT standards for artifacts. 
 - [ ] If data cannot be shared, it is desirable to create a sample dataset that can be shared to illustrate the use of the algorithms. 
 - [ ] The option space chosen from in formulating a solution should be realistic. If setting a value for an attribute, that value should reflect one that might be chosen in a "real-world" solution, and not generated from an arbitrary distribution.
@@ -60,7 +60,7 @@ The most valuable quality criteria for optimization studies in SE include reliab
 
 ## Examples of Acceptable Deviations
 
- - The number of trials can be constrained by available time or experimental resources, in cases where experiments are time-consuming to repeat or have human elements. In such cases, multiple trials are still ideal, but a limited number of trials can be justified as long as the limitations are disclosed, and as long as the possible effects of stochasticity are discussed.
+ - The number of trials can be constrained by the time available or by the experimental resources, in cases where experiments are time-consuming to repeat or have human elements. In such cases, multiple trials are still ideal, but a limited number of trials can be justified as long as the limitations are disclosed, and as long as the possible effects of stochasticity are discussed.
  - The use of industrial case studies is important in demonstrating the real-world application of a proposed technique, but industrial data generally cannot be shared. In such cases, it is recommended that a small open-source example be prepared and distributed as part of a replication package to demonstrate how the approach can be applied.
 
 ## Antipatterns
@@ -71,7 +71,7 @@ The most valuable quality criteria for optimization studies in SE include reliab
 
 ## Invalid Criticisms
 
-- The paper is unimportant. Be cautious of rejection papers that seem “unimportant” (in the eyes of a reviewer). Research is exploratory and about taking risks. Clealy-motivated research and speculative exploration are both important and should be rewarded.
+- The paper is unimportant. Be cautious of rejected papers that seem “unimportant” (in the eyes of a reviewer). Research is exploratory and it is about taking risks. Clealy-motivated research and speculative exploration are both important and should be rewarded.
 - The paper just uses older algorithms with no reference to recent work. Using  older (and widely understood algorithms) may be valid when they are used, e.g., (1) as part of a larger set that compares many approaches; e.g. (2) to offer a “straw man” method that defines the “floor” of the performance (that everything else needs to beat); or (3), as a workbench within which one thing is changed (e.g., the fitness function) but everything else remains constant.
 - That an approach is not benchmarked against an inappropriate or unavailable baseline. If a state-of-the-art approach lacks an available and functional implementation, it is not reasonable to expect the author to recreate that approach for benchmarking purposes. 
 - That a multi-objective approach is not compared to a single-objective approach by evaluating each objective separately. This is not a meaningful comparison because, in a multi-objective problem, the trade-off between the objectives is a major factor in result quality. It is more important to consider the Pareto frontiers and quality indicators.
