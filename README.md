@@ -71,7 +71,7 @@ The most valuable quality criteria for optimization studies in SE include reliab
 
 ## Invalid Criticisms
 
-- The paper is unimportant. Be cautious of rejected papers that seem “unimportant” (in the eyes of a reviewer). Research is exploratory and it is about taking risks. Clealy-motivated research and speculative exploration are both important and should be rewarded.
+- The paper is unimportant. Be cautious of rejecting papers that seem “unimportant” (in the eyes of a reviewer). Research is exploratory and it is about taking risks. Clealy-motivated research and speculative exploration are both important and should be rewarded.
 - The paper just uses older algorithms with no reference to recent work. Using  older (and widely understood algorithms) may be valid when they are used, e.g., (1) as part of a larger set that compares many approaches; e.g. (2) to offer a “straw man” method that defines the “floor” of the performance (that everything else needs to beat); or (3), as a workbench within which one thing is changed (e.g., the fitness function) but everything else remains constant.
 - That an approach is not benchmarked against an inappropriate or unavailable baseline. If a state-of-the-art approach lacks an available and functional implementation, it is not reasonable to expect the author to recreate that approach for benchmarking purposes. 
 - That a multi-objective approach is not compared to a single-objective approach by evaluating each objective separately. This is not a meaningful comparison because, in a multi-objective problem, the trade-off between the objectives is a major factor in result quality. It is more important to consider the Pareto frontiers and quality indicators.
