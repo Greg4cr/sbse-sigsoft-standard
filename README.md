@@ -28,19 +28,20 @@ We stress that the use of optimization in SE is still a rapidly evolving field. 
 - [ ] Follow and clearly describe a sound process to collect and prepare the datasets used to run and to evaluate the optimization approach. If the subjects are taken from previous work, fully reference the original source and explain whether any transformation or cleaning was applied to the datasets. Otherwise, clearly describe the collection process and, wherever possible, make the subjects publicly available or explain why this is not possible<sup>[11](#footnote11)</sup>.
 - [ ] All possible sources of stochasticity need to be identified, explained and accounted for by executing multiple repetitions for each source where possible (otherwise, explain why this is not possible)<sup>[12](#footnote12)</sup>.
 - [ ] Stochastic approaches must be executed multiple times. If this is not possible, a justification should be provided<sup>[13](#footnote13)</sup>.
-- [ ] 
 </checklist>
 
 ### Desirable
 <checklist name="Desirable">
 
 - [ ] State if and how the study explores a new problem type (or a new area within an existing problem space) that has never been studied in the literature, or if the study reproduces and replicates prior work (and explains any small improvement). 
-- [ ] Provide a detailed explanation on how subjects or datasets were collected and chosen in order to mitigate selection bias and improve the generalization of the findings. Describe the main features of the subjects used to run and evaluate the optimization approach(es) and discuss what characterizes the different instances in terms of "hardness". In case of data-driven approaches, if random data splits are used, this should be made publicly available or at least reproducibile. In case of synthetic data, clearly explain why real-world data cannot be used, and to what extent the proposed approach and the findings can be applicable to a real-world setting.
-- [ ] To enable open science, a replication package should be made available that conforms to SIGSOFT standards for artifacts. 
+- [ ] Provide a detailed explanation on how subjects or datasets are collected and chosen in order to mitigate selection bias and improve the generalization of the findings. 
+- [ ] Describe the main features of the subjects or datasets used to run and evaluate the optimization approach(es) and discuss how the difference instances differ for example in terms of problem difficulty or scalability.
+- [ ] If synthetic subjects or dataset are used, clearly explain why real-world ones cannot be used, and to what extent the proposed approach and the findings can be applicable to a real-world setting.
+- [ ] To enable open science, a replication package should be made available that conforms to SIGSOFT standards for artifacts.
 - [ ] If data cannot be shared, it is desirable to create a sample dataset that can be shared to illustrate the use of the algorithms. 
 - [ ] The option space chosen from in formulating a solution should be realistic. If setting a value for an attribute, that value should reflect one that might be chosen in a "real-world" solution, and not generated from an arbitrary distribution.
 - [ ] Provide justification for the parameter values used when executing the evaluated approaches (and note that experiments trying a wide range of different parameter values would be extraordinary, see below). 
-- [ ] One should sample from data multiple times in a controlled manner (where appropriate and possible). Multiple trials can either be performed as a cross-validation (multiple independent executions) or temporally (multiple applications as part of a timed sequence), depending on the problem at hand. 
+- [ ] One should sample from data multiple times in a controlled manner (where appropriate and possible). Multiple trials can either be performed as a cross-validation (multiple independent executions) or temporally (multiple applications as part of a timed sequence), depending on the problem at hand. If random data splits are used, this should be made publicly available or at least reproducibile.
 - [ ] Compare results using statistics that compare distributions, rather than comparing the mean.
 - [ ] Use an appropriate meta-evaluation criteria to compare solutions<sup>[14](#footnote14)</sup>. Regardless of the chosen criteria, provide a justification for that choice. 
 
