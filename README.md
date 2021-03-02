@@ -23,15 +23,14 @@ We stress that the use of optimization in SE is still a rapidly evolving field. 
 - [ ] EITHER include a description of prior state of the art in this area,
       OR carefully motivate and define the problem tackled and the solution proposed. 
 - [ ] Justify the choice of algorithm<sup>[5](#footnote5)</sup> underlying an approach<sup>[6](#footnote6)</sup>.
-- [ ] Approaches must be compared to a justified and appropriate baseline<sup>[7](#footnote7)</sup>.
+- [ ] Compare approaches to a justified and appropriate baseline<sup>[7](#footnote7)</sup>.
 - [ ] Explictly define the solution formulation, including a description of what a solution represents<sup>[8](#footnote8)</sup>, how it is represented<sup>[9](#footnote9)</sup>, and how it is manipulated. 
 - [ ] Explicitly define all fitness functions, including the type of goals that are optimized and the equations for calculating fitness values. 
 - [ ] Explicitly define evaluated approaches, including the techniques, specific heuristics, and the parameters and their values<sup>[10](#footnote10)</sup>. 
 - [ ] EITHER follow and clearly describe a sound process to collect and prepare the datasets used to run and to evaluate the optimization approach and make data publicly available or explain why this is not possible<sup>[11](#footnote11)</sup>, 
       OR, if the subjects are taken from previous work, fully reference the original source and explain whether any transformation or cleaning was applied to the datasets. 
-- [ ] All possible sources of stochasticity need to be identified and explained.
-- [ ] All sources of stochasticity need to be accounted for EITHER by executing multiple repetitions for each source OR explain why this is not possible<sup>[12](#footnote12)</sup>.
-- [ ] EITHER execute stochastic approaches multiple times OR explain why this is not possible<sup>[13](#footnote13)</sup>.
+- [ ] Identify and explain all possible sources of stochasticity<sup>[12](#footnote12)</sup>.
+- [ ] EITHER execute stochastic approaches or elements multiple times OR explain why this is not possible<sup>[13](#footnote13)</sup>.
 
 </checklist>
 
@@ -43,7 +42,7 @@ We stress that the use of optimization in SE is still a rapidly evolving field. 
 - [ ] Describe the main features of the subjects used to run and evaluate the optimization approach(es) and discuss what characterizes the different instances in terms of "hardness". 
 - [ ] Justify the use of synthetic data (if any); explain why real-world data cannot be used; discusses the extent to which the proposed approach and the findings can apply to the real world.
 - [ ] Make available a replication package that conforms to SIGSOFT standards for artifacts. 
-- [ ] If data cannot be shared, it is desirable to create a sample dataset that can be shared to illustrate the use of the algorithms. 
+- [ ] If data cannot be shared, create a sample dataset that can be shared to illustrate the approach. 
 - [ ] Select a realistic option space for formulating a solution. Any values set for attributes should reflect one that might be chosen in a "real-world" solution, and not generated from an arbitrary distribution.
 - [ ] Justify the parameter values used when executing the evaluated approaches (and note that experiments trying a wide range of different parameter values would be extraordinary, see below). 
 - [ ] Sample from data multiple times in a controlled manner (where appropriate and possible).
@@ -97,7 +96,6 @@ The most valuable quality criteria for optimization studies in SE include reliab
 39(4):537–551, 2013.
 - Guenther Ruhe. 2020. Optimization in Software Engineering - A Pragmatic Approach. In  Felderer, M. and Travassos, G.H. eds., Contemporary Empirical Methods in Software Engineering, Springer. DOI: https://doi.org/10.1007/978-3-030-32489-6_9
 
-
 ## Exemplars
 
 - Hussein Almulla, Gregory Gay. 2020. Learning How to Search: Generating Exception-Triggering Tests Through Adaptive Fitness Function Selection. In Proceedings of 13th IEEE International Conference on Software Testing (ICST’20). IEEE, 63-73. DOI: https://doi.org/10.1109/ICST46399.2020.00017 
@@ -112,9 +110,8 @@ The most valuable quality criteria for optimization studies in SE include reliab
 
 ## Notes
 
-Regarding the difference between "significance" and "effect size" tests: "Significance" checks if distributions can be distinguished from each other while "Effect size" tests are required to check if the difference between distributions is "interesting" (and not just a trivially "small effect"). These tests can be parametric or non-parametric. For example, the parametric t-test/Hedges significance/effect tests endorsed by Kampenese et al. are coded up at https://tinyurl.com/y4o7ucnx.  Also a parametric Scott-Knot/Cohen test of the kind endorsed by Mittas et al. is coded at https://tinyurl.com/y5tg37fp. The non-parametric bootstrap/Cliffs Delta significant/effect tests of the   kind endorsed by  Efron et al. and Arcuri et al.
-is coded at https://tinyurl.com/y2ufofgu.  
-
+Regarding the difference between "significance" and "effect size" tests: "Significance" checks if distributions can be distinguished from each other while "Effect size" tests are required to check if the difference between distributions is "interesting" (and not just a trivially "small effect"). These tests can be parametric or non-parametric. For example, code for the parametric t-test/Hedges significance/effect tests endorsed by Kampenese et al. can be found at https://tinyurl.com/y4o7ucnx.  Code for a parametric Scott-Knot/Cohen test of the kind endorsed by Mittas et al. is available at https://tinyurl.com/y5tg37fp. Code for the non-parametric bootstrap/Cliffs Delta significant/effect tests of the  kind endorsed by  Efron et al. and Arcuri et al.
+can be found at https://tinyurl.com/y2ufofgu.  
 
 ## Footnotes
 
