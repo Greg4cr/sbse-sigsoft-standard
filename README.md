@@ -16,42 +16,45 @@ We stress that the use of optimization in SE is still a rapidly evolving field. 
 
 ### Essential
 <checklist name="Essential">
-
-- [ ] Describe the search space (including constraints and independent variables choices) and explain why the optimization problem cannot be solved manually or through a brute force enumeration of all solutions within a reasonable timeframe<sup>[4](#footnote4)</sup>. 
+- [ ] Describe the search space (e.g., constraints, independent variables choices).
+- [ ] Explain why the problem cannot be optimized manually or by brute force within a reasonable timeframe<sup>[4](#footnote4)</sup>. 
 - [ ] Use realistic and limited simplifications and constraints for the optimization problem. Simplifications and constraints must not reduce the search to one where all solutions could be enumerated through brute force.
-- [ ] Either include a description of prior state of the art in this area or carefully motivate and define the problem tackled and the solution proposed. 
-- [ ] The algorithm underlying an approach<sup>[5](#footnote5)</sup> should be justified and appropriate for the problem being optimized<sup>[6](#footnote6)</sup>.
+- [ ] EITHER include a description of prior state of the art in this area,
+      OR carefully motivate and define the problem tackled and the solution proposed. 
+- [ ] Justify the choice of algorithm<sup>[5](#footnote5)</sup> underlying an approach<sup>[6](#footnote6)</sup>.
 - [ ] Approaches must be compared to a justified and appropriate baseline<sup>[7](#footnote7)</sup>.
-- [ ] The solution formulation must be explicitly defined, including a description of what a solution represents<sup>[8](#footnote8)</sup>, how a solution is represented<sup>[9](#footnote9)</sup>, and how solutions are manipulated by the evaluated approaches. 
-- [ ] All fitness functions used must be explicitly defined, including a description of the type of goals that are minimized or maximized and the equations for calculating the fitness value. 
-- [ ] The evaluated approaches must be explicitly defined, including the applied techniques, specific heuristics applied, and the algorithm parameters and their values<sup>[10](#footnote10)</sup>. 
-- [ ] Follow and clearly describe a sound process to collect and prepare the datasets used to run and to evaluate the optimization approach. If the subjects are taken from previous work, fully reference the original source and explain whether any transformation or cleaning was applied to the datasets. Otherwise, clearly describe the collection process and, wherever possible, make the subjects publicly available or explain why this is not possible<sup>[11](#footnote11)</sup>.
-- [ ] All possible sources of stochasticity need to be identified, explained and accounted for by executing multiple repetitions for each source where possible (otherwise, explain why this is not possible)<sup>[12](#footnote12)</sup>.
-- [ ] Stochastic approaches must be executed multiple times. If this is not possible, a justification should be provided<sup>[13](#footnote13)</sup>.
+- [ ] Explictly define the solution formulation, including a description of what a solution represents<sup>[8](#footnote8)</sup>, how it is represented<sup>[9](#footnote9)</sup>, and how it is manipulated. 
+- [ ] Explicitly define all fitness functions, including the type of goals that are optimized and the equations for calculating fitness values. 
+- [ ] Explicitly define evaluated approaches, including the techniques, specific heuristics, and the parameters and their values<sup>[10](#footnote10)</sup>. 
+- [ ] EITHER follow and clearly describe a sound process to collect and prepare the datasets used to run and to evaluate the optimization approach and make data publicly available or explain why this is not possible<sup>[11](#footnote11)</sup>, 
+      OR, if the subjects are taken from previous work, fully reference the original source and explain whether any transformation or cleaning was applied to the datasets. 
+- [ ] All possible sources of stochasticity need to be identified and explained.
+- [ ] All sources of stochasticity need to be accounted for EITHER by executing multiple repetitions for each source OR explain why this is not possible<sup>[12](#footnote12)</sup>.
+- [ ] EITHER execute stochastic approaches multiple times OR explain why this is not possible<sup>[13](#footnote13)</sup>.
 </checklist>
 
 ### Desirable
 <checklist name="Desirable">
 
-- [ ] State if and how the study explores a new problem type (or a new area within an existing problem space) that has never been studied in the literature, or if the study reproduces and replicates prior work (and explains any small improvement). 
-- [ ] Provide a detailed explanation on how subjects or datasets are collected and chosen in order to mitigate selection bias and improve the generalization of the findings. 
-- [ ] Describe the main features of the subjects or datasets used to run and evaluate the optimization approach(es) and discuss how the difference instances differ for example in terms of problem difficulty or scalability.
-- [ ] If synthetic subjects or dataset are used, clearly explain why real-world ones cannot be used, and to what extent the proposed approach and the findings can be applicable to a real-world setting.
-- [ ] To enable open science, a replication package should be made available that conforms to SIGSOFT standards for artifacts.
+- [ ] Explain whether the study explores a new problem type (or a new area within an existing problem space), or how it reproduces, replicates, or improves upon prior work. 
+- [ ] Explain in detail how subjects or datasets were collected/chosen to mitigate selection bias and improve the generalization of findings. 
+- [ ] Describe the main features of the subjects used to run and evaluate the optimization approach(es) and discuss what characterizes the different instances in terms of "hardness". 
+- [ ] Justify the use of synthetic data (if any); explain why real-world data cannot be used; discusses the extent to which the proposed approach and the findings can apply to the real world.
+- [ ] Make available a replication package that conforms to SIGSOFT standards for artifacts. 
 - [ ] If data cannot be shared, it is desirable to create a sample dataset that can be shared to illustrate the use of the algorithms. 
-- [ ] The option space chosen from in formulating a solution should be realistic. If setting a value for an attribute, that value should reflect one that might be chosen in a "real-world" solution, and not generated from an arbitrary distribution.
-- [ ] Provide justification for the parameter values used when executing the evaluated approaches (and note that experiments trying a wide range of different parameter values would be extraordinary, see below). 
-- [ ] One should sample from data multiple times in a controlled manner (where appropriate and possible). Multiple trials can either be performed as a cross-validation (multiple independent executions) or temporally (multiple applications as part of a timed sequence), depending on the problem at hand. If random data splits are used, this should be made publicly available or at least reproducibile.
-- [ ] Compare results using statistics that compare distributions, rather than comparing the mean.
-- [ ] Use an appropriate meta-evaluation criteria to compare solutions<sup>[14](#footnote14)</sup>. Regardless of the chosen criteria, provide a justification for that choice. 
-
+- [ ] Select a realistic option space for formulating a solution. Any values set for attributes should reflect one that might be chosen in a "real-world" solution, and not generated from an arbitrary distribution.
+- [ ] Justify the parameter values used when executing the evaluated approaches (and note that experiments trying a wide range of different parameter values would be extraordinary, see below). 
+- [ ] Sample from data multiple times in a controlled manner (where appropriate and possible).
+- [ ] Perform multiple trials either as a cross-validation (multiple independent executions) or temporally (multiple applications as part of a timed sequence), depending on the problem at hand. 
+- [ ] Make available random data splits (e.g., those used in data-driven approaches) or, at least, ensure splits are reproducibile. 
+- [ ] Compare distributions (rather than means) of results using appropriate statistics.
+- [ ] Compare solutions using an appropriate meta-evaluation criteria<sup>[14](#footnote14)</sup>. Justify the chosen criteria. 
 </checklist>
 
 ### Extraordinary
 <checklist name="Extraordinary">
-
-- [ ] Provide an analysis of different parameter choices to the algorithm, indicating how the final parameters were selected<sup>[15](#footnote15)</sup>. 
-- [ ] Provide an analysis of the fitness landscape for one or more of the chosen fitness functions. 
+- [ ] Analyze different parameter choices to the algorithm, indicating how the final parameters were selected<sup>[15](#footnote15)</sup>. 
+- [ ] Analyze the fitness landscape for one or more of the chosen fitness functions. 
 </checklist>
 
 ## General Quality Criteria
@@ -60,14 +63,13 @@ The most valuable quality criteria for optimization studies in SE include reliab
 
 ## Examples of Acceptable Deviations
 
- - The number of trials can be constrained by the time available or by the experimental resources, in cases where experiments are time-consuming to repeat or have human elements. In such cases, multiple trials are still ideal, but a limited number of trials can be justified as long as the limitations are disclosed, and as long as the possible effects of stochasticity are discussed.
+ - The number of trials can be constrained by available time or experimental resources (e.g. where experiments are time-consuming to repeat or have human elements). In such cases, multiple trials are still ideal, but a limited number of trials can be justified as long as the limitations are disclosed and the possible effects of stochasticity are discussed.
  - The use of industrial case studies is important in demonstrating the real-world application of a proposed technique, but industrial data generally cannot be shared. In such cases, it is recommended that a small open-source example be prepared and distributed as part of a replication package to demonstrate how the approach can be applied.
 
 ## Antipatterns
 
-- Significance tests (e.g., Mann-Whitney Wilcoxon test) are used without effect size tests. 
-  For more on these two tests, see **Notes**
-- Multiple trials conducted, but no disclosure or discussion on the variation between trials. Reporting a median, without any indication of variance (e.g., a boxplot), does not indicate potential variation between each trial.
+- Reporting significance tests (e.g., Mann-Whitney Wilcoxon test) without effect size tests (see **Notes**)
+- Conducting multiple trials but failing to disclose or discuss the variation between trials; for instance reporting a measure of central (e.g. median) without any indication of variance (e.g., a boxplot).
 
 ## Invalid Criticisms
 
@@ -75,7 +77,7 @@ The most valuable quality criteria for optimization studies in SE include reliab
 - The paper just uses older algorithms with no reference to recent work. Using  older (and widely understood algorithms) may be valid when they are used, e.g., (1) as part of a larger set that compares many approaches; e.g. (2) to offer a “straw man” method that defines the “floor” of the performance (that everything else needs to beat); or (3), as a workbench within which one thing is changed (e.g., the fitness function) but everything else remains constant.
 - That an approach is not benchmarked against an inappropriate or unavailable baseline. If a state-of-the-art approach lacks an available and functional implementation, it is not reasonable to expect the author to recreate that approach for benchmarking purposes. 
 - That a multi-objective approach is not compared to a single-objective approach by evaluating each objective separately. This is not a meaningful comparison because, in a multi-objective problem, the trade-off between the objectives is a major factor in result quality. It is more important to consider the Pareto frontiers and quality indicators.
-- Reviewers should not reject a paper based on the fact that one or very few subjects are used as long as the paper clearly justifies why this was the case. We reccomend the reviewers to provide valid criticism as to why in their opinion a single subject is not sufficient, and whenever possible seek for more clarification from the authors on why it is not possible to use more subjects.
+- That one or very few subjects are used, as long as the paper offers a reasonable justification for why this was the case. 
 
 ## Suggested Readings
 
@@ -104,9 +106,6 @@ The most valuable quality criteria for optimization studies in SE include reliab
 - Norbert Siegmund, Stefan Sobernig, and Sven Apel. 2017. Attributed variability models: outside the comfort zone. In Proceedings of the 2017 11th Joint Meeting on Foundations of Software Engineering (ESEC/FSE. Association for Computing Machinery, New York, NY, USA, 268–278. DOI: https://doi.org/10.1145/3106237.3106251
 
 ## Notes
-
-**This standard is a living artifact.** We welcome pull requests with suggested edits to 
-existing items, additional items in each category, suggested reading, and exemplar papers. 
 
 Regarding the difference between "significance" and "effect size" tests: "Significance" checks if distributions can be distinguished from each other while "Effect size" tests are required to check if the difference between distributions is "interesting" (and not just a trivially "small effect"). These tests can be parametric or non-parametric. For example, the parametric t-test/Hedges significance/effect tests endorsed by Kampenese et al. are coded up at https://tinyurl.com/y4o7ucnx.  Also a parametric Scott-Knot/Cohen test of the kind endorsed by Mittas et al. is coded at https://tinyurl.com/y5tg37fp. The non-parametric bootstrap/Cliffs Delta significant/effect tests of the   kind endorsed by  Efron et al. and Arcuri et al.
 is coded at https://tinyurl.com/y2ufofgu.  
