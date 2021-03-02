@@ -12,7 +12,7 @@ This standard applies to empirical studies that meet the following criteria:
 
 ## Specific Attributes
 
-We stress that the use of optimization in SE is still a rapidly evolving field. Hence, the following criteria are approximate and many exceptions exist to these criteria. Reviewers should reward sound and novel work and, where possible, support a diverse range of studies.
+We stress that the use of optimization in SE is still a rapidly evolving field. Hence, the following criteria are approximate and there may exist many exceptions to them. Reviewers should reward sound and novel work and, where possible, support a diverse range of studies.
 
 ### Essential
 <checklist name="Essential">
@@ -24,7 +24,7 @@ We stress that the use of optimization in SE is still a rapidly evolving field. 
       OR carefully motivate and define the problem tackled and the solution proposed. 
 - [ ] Justify the choice of algorithm<sup>[5](#footnote5)</sup> underlying an approach<sup>[6](#footnote6)</sup>.
 - [ ] Approaches must be compared to a justified and appropriate baseline<sup>[7](#footnote7)</sup>.
-- [ ] The solution formulation must be explicitly defined, including a description of what a solution represents<sup>[8](#footnote8)</sup>, how it is represented<sup>[9](#footnote9)</sup>, and how it is manipulated. 
+- [ ] Explictly define the solution formulation, including a description of what a solution represents<sup>[8](#footnote8)</sup>, how it is represented<sup>[9](#footnote9)</sup>, and how it is manipulated. 
 - [ ] Explicitly define all fitness functions, including the type of goals that are optimized and the equations for calculating fitness values. 
 - [ ] Explicitly define evaluated approaches, including the techniques, specific heuristics, and the parameters and their values<sup>[10](#footnote10)</sup>. 
 - [ ] EITHER follow and clearly describe a sound process to collect and prepare the datasets used to run and to evaluate the optimization approach and make data publicly available or explain why this is not possible<sup>[11](#footnote11)</sup>, 
@@ -78,7 +78,7 @@ The most valuable quality criteria for optimization studies in SE include reliab
 
 ## Invalid Criticisms
 
-- The paper is unimportant. Be cautious of rejection papers that seem “unimportant” (in the eyes of a reviewer). Research is exploratory and about taking risks. Clealy-motivated research and speculative exploration are both important and should be rewarded.
+- The paper is unimportant. Be cautious of rejecting papers that seem “unimportant” (in the eyes of a reviewer). Research is exploratory and it is about taking risks. Clealy-motivated research and speculative exploration are both important and should be rewarded.
 - The paper just uses older algorithms with no reference to recent work. Using  older (and widely understood algorithms) may be valid when they are used, e.g., (1) as part of a larger set that compares many approaches; e.g. (2) to offer a “straw man” method that defines the “floor” of the performance (that everything else needs to beat); or (3), as a workbench within which one thing is changed (e.g., the fitness function) but everything else remains constant.
 - That an approach is not benchmarked against an inappropriate or unavailable baseline. If a state-of-the-art approach lacks an available and functional implementation, it is not reasonable to expect the author to recreate that approach for benchmarking purposes. 
 - That a multi-objective approach is not compared to a single-objective approach by evaluating each objective separately. This is not a meaningful comparison because, in a multi-objective problem, the trade-off between the objectives is a major factor in result quality. It is more important to consider the Pareto frontiers and quality indicators.
