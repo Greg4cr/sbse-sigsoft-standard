@@ -32,24 +32,24 @@ We stress that the use of optimization in SE is still a rapidly evolving field. 
 - [ ] All possible sources of stochasticity need to be identified and explained.
 - [ ] All sources of stochasticity need to be accounted for EITHER by executing multiple repetitions for each source OR explain why this is not possible<sup>[12](#footnote12)</sup>.
 - [ ] EITHER execute stochastic approaches multiple times OR explain why this is not possible<sup>[13](#footnote13)</sup>.
-- [ ] One should sample from data multiple times in a controlled manner (where appropriate and possible).
-- [ ] Perform multiple trials either as a cross-validation (multiple independent executions) or temporally (multiple applications as part of a timed sequence), depending on the problem at hand. 
-- [ ] Compare distributions (rather than means) of results using appropriate statistics.
 
 </checklist>
 
 ### Desirable
 <checklist name="Desirable">
 
-- [ ] Explain whether the study explores a new problem type (or a new area within an existing problem space), or how it reproduces, replicatesm, or improves upon prior work. 
+- [ ] Explain whether the study explores a new problem type (or a new area within an existing problem space), or how it reproduces, replicates, or improves upon prior work. 
 - [ ] Explain in detail how subjects or datasets were collected/chosen to mitigate selection bias and improve the generalization of findings. 
 - [ ] Describe the main features of the subjects used to run and evaluate the optimization approach(es) and discuss what characterizes the different instances in terms of "hardness". 
-- [ ] Make available random data splits (e.g., those used in data-driven approaches) or, at least, ensure splits are reproducibile. 
 - [ ] Justify the use of synthetic data (if any); explain why real-world data cannot be used; discusses the extent to which the proposed approach and the findings can apply to the real world.
 - [ ] A replication package should be made available that conforms to SIGSOFT standards for artifacts. 
 - [ ] If data cannot be shared, it is desirable to create a sample dataset that can be shared to illustrate the use of the algorithms. 
 - [ ] Select a realistic option space for formulating a solution. Any values set for attributes should reflect one that might be chosen in a "real-world" solution, and not generated from an arbitrary distribution.
 - [ ] Justify the parameter values used when executing the evaluated approaches (and note that experiments trying a wide range of different parameter values would be extraordinary, see below). 
+- [ ] Sample from data multiple times in a controlled manner (where appropriate and possible).
+- [ ] Perform multiple trials either as a cross-validation (multiple independent executions) or temporally (multiple applications as part of a timed sequence), depending on the problem at hand. 
+- [ ] Make available random data splits (e.g., those used in data-driven approaches) or, at least, ensure splits are reproducibile. 
+- [ ] Compare distributions (rather than means) of results using appropriate statistics.
 - [ ] Compare solutions using an appropriate meta-evaluation criteria<sup>[14](#footnote14)</sup>. Justify the chosen criteria. 
 
 </checklist>
@@ -57,7 +57,7 @@ We stress that the use of optimization in SE is still a rapidly evolving field. 
 ### Extraordinary
 <checklist name="Extraordinary">
 
-- [ ] Analyze fifferent parameter choices to the algorithm, indicating how the final parameters were selected<sup>[15](#footnote15)</sup>. 
+- [ ] Analyze different parameter choices to the algorithm, indicating how the final parameters were selected<sup>[15](#footnote15)</sup>. 
 - [ ] Analyze the fitness landscape for one or more of the chosen fitness functions. 
 
 </checklist>
