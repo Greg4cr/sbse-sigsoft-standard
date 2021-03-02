@@ -56,7 +56,7 @@ We stress that the use of optimization in SE is still a rapidly evolving field. 
 ### Extraordinary
 <checklist name="Extraordinary">
     
-- [ ] Analyze different parameter choices to the algorithm, indicating how the final parameters were selected<sup>[15](#footnote15)</sup>. 
+- [ ] Analyze different parameter choices to the algorithm, indicating how the final parameters were selected<sup>[16](#footnote16)</sup>. 
 - [ ] Analyze the fitness landscape for one or more of the chosen fitness functions.
 
 </checklist>
@@ -145,4 +145,4 @@ can be found at https://tinyurl.com/y2ufofgu.
 
 <sup><a name="footnote15">15</a></sup>: For example, if applying a multi-objective optimization approach, then use a criterion that can analyze the Pareto frontier of solutions (e.g., generational distance and inverse generational distance)
 
-<sup><a name="footnote15">15</a></sup>: E.g., applying hyperparameter optimization.
+<sup><a name="footnote16">16</a></sup>: E.g., applying hyperparameter optimization.
