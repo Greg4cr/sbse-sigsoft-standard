@@ -16,6 +16,7 @@ We stress that the use of optimization in SE is still a rapidly evolving field. 
 
 ### Essential
 <checklist name="Essential">
+
 - [ ] Describe the search space (e.g., constraints, independent variables choices).
 - [ ] Explain why the problem cannot be optimized manually or by brute force within a reasonable timeframe<sup>[4](#footnote4)</sup>. 
 - [ ] Use realistic and limited simplifications and constraints for the optimization problem. Simplifications and constraints must not reduce the search to one where all solutions could be enumerated through brute force.
@@ -31,6 +32,7 @@ We stress that the use of optimization in SE is still a rapidly evolving field. 
 - [ ] All possible sources of stochasticity need to be identified and explained.
 - [ ] All sources of stochasticity need to be accounted for EITHER by executing multiple repetitions for each source OR explain why this is not possible<sup>[12](#footnote12)</sup>.
 - [ ] EITHER execute stochastic approaches multiple times OR explain why this is not possible<sup>[13](#footnote13)</sup>.
+
 </checklist>
 
 ### Desirable
@@ -49,12 +51,15 @@ We stress that the use of optimization in SE is still a rapidly evolving field. 
 - [ ] Make available random data splits (e.g., those used in data-driven approaches) or, at least, ensure splits are reproducibile. 
 - [ ] Compare distributions (rather than means) of results using appropriate statistics.
 - [ ] Compare solutions using an appropriate meta-evaluation criteria<sup>[14](#footnote14)</sup>. Justify the chosen criteria. 
+
 </checklist>
 
 ### Extraordinary
 <checklist name="Extraordinary">
+    
 - [ ] Analyze different parameter choices to the algorithm, indicating how the final parameters were selected<sup>[15](#footnote15)</sup>. 
-- [ ] Analyze the fitness landscape for one or more of the chosen fitness functions. 
+- [ ] Analyze the fitness landscape for one or more of the chosen fitness functions.
+
 </checklist>
 
 ## General Quality Criteria
