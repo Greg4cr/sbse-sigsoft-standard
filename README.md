@@ -28,10 +28,7 @@ We stress that the use of optimization in SE is still a rapidly evolving field. 
 - [ ] Follow and clearly describe a sound process to collect and prepare the datasets used to run and to evaluate the optimization approach. If the subjects are taken from previous work, fully reference the original source and explain whether any transformation or cleaning was applied to the datasets. Otherwise, clearly describe the collection process and, wherever possible, make the subjects publicly available or explain why this is not possible<sup>[11](#footnote11)</sup>.
 - [ ] All possible sources of stochasticity need to be identified, explained and accounted for by executing multiple repetitions for each source where possible (otherwise, explain why this is not possible)<sup>[12](#footnote12)</sup>.
 - [ ] Stochastic approaches must be executed multiple times. If this is not possible, a justification should be provided<sup>[13](#footnote13)</sup>.
-- [ ] One should sample from data multiple times in a controlled manner (where appropriate and possible).
-- [ ] Multiple trials can either be performed as a cross-validation (multiple independent executions) or temporally (multiple applications as part of a timed sequence), depending on the problem at hand. 
-- [ ] Compare results using statistics that compare distributions, rather than comparing the mean.
-
+- [ ] 
 </checklist>
 
 ### Desirable
@@ -43,6 +40,8 @@ We stress that the use of optimization in SE is still a rapidly evolving field. 
 - [ ] If data cannot be shared, it is desirable to create a sample dataset that can be shared to illustrate the use of the algorithms. 
 - [ ] The option space chosen from in formulating a solution should be realistic. If setting a value for an attribute, that value should reflect one that might be chosen in a "real-world" solution, and not generated from an arbitrary distribution.
 - [ ] Provide justification for the parameter values used when executing the evaluated approaches (and note that experiments trying a wide range of different parameter values would be extraordinary, see below). 
+- [ ] One should sample from data multiple times in a controlled manner (where appropriate and possible). Multiple trials can either be performed as a cross-validation (multiple independent executions) or temporally (multiple applications as part of a timed sequence), depending on the problem at hand. 
+- [ ] Compare results using statistics that compare distributions, rather than comparing the mean.
 - [ ] Use an appropriate meta-evaluation criteria to compare solutions<sup>[14](#footnote14)</sup>. Regardless of the chosen criteria, provide a justification for that choice. 
 
 </checklist>
