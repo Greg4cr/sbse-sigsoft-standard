@@ -37,6 +37,7 @@ We stress that the use of optimization in SE is still a rapidly evolving field. 
 ### Desirable
 <checklist name="Desirable">
 
+- [ ] Sound and novel work, support extension of current thinking into a diverse range of new directions.
 - [ ] Explain whether the study explores a new problem type (or a new area within an existing problem space), or how it reproduces, replicates, or improves upon prior work. 
 - [ ] Explain in detail how subjects or datasets were collected/chosen to mitigate selection bias and improve the generalization of findings. 
 - [ ] Describe the main features of the subjects used to run and evaluate the optimization approach(es) and discuss what characterizes the different instances in terms of "hardness". 
@@ -50,6 +51,7 @@ We stress that the use of optimization in SE is still a rapidly evolving field. 
 - [ ] Make available random data splits (e.g., those used in data-driven approaches) or, at least, ensure splits are reproducibile. 
 - [ ] Compare distributions (rather than means) of results using appropriate statistics.
 - [ ] Compare solutions using an appropriate meta-evaluation criteria<sup>[15](#footnote15)</sup>. Justify the chosen criteria. 
+- [ ]
 
 </checklist>
 
