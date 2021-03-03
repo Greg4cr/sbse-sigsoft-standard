@@ -12,7 +12,7 @@ This standard applies to empirical studies that meet the following criteria:
 
 ## Specific Attributes
 
-We stress that the use of optimization in SE is still a rapidly evolving field. Hence, the following criteria are approximate and there may exist many exceptions to them. Reviewers should reward sound and novel work and, where possible, support a diverse range of studies.
+We stress that the use of optimization in SE is still a rapidly evolving field. Hence, the following criteria are approximate and there may exist many exceptions to them. 
 
 ### Essential
 <checklist name="Essential">
@@ -37,12 +37,12 @@ We stress that the use of optimization in SE is still a rapidly evolving field. 
 ### Desirable
 <checklist name="Desirable">
 
-- [ ] Sound and novel work, support extension of current thinking into a diverse range of new directions.
+- [ ] Motivate the novelty and soundness of the proposed approach<sup>[14](#footnote14)</sup>.
 - [ ] Explain whether the study explores a new problem type (or a new area within an existing problem space), or how it reproduces, replicates, or improves upon prior work. 
 - [ ] Explain in detail how subjects or datasets were collected/chosen to mitigate selection bias and improve the generalization of findings. 
 - [ ] Describe the main features of the subjects used to run and evaluate the optimization approach(es) and discuss what characterizes the different instances in terms of "hardness". 
 - [ ] Justify the use of synthetic data (if any); explain why real-world data cannot be used; discusses the extent to which the proposed approach and the findings can apply to the real world.
-- [ ] Make available a replication package that conforms to SIGSOFT standards for artifacts<sup>[14](#footnote14)</sup>. 
+- [ ] Make available a replication package that conforms to SIGSOFT standards for artifacts<sup>[15](#footnote15)</sup>. 
 - [ ] If data cannot be shared, create a sample dataset that can be shared to illustrate the approach. 
 - [ ] Select a realistic option space for formulating a solution. Any values set for attributes should reflect one that might be chosen in a "real-world" solution, and not generated from an arbitrary distribution.
 - [ ] Justify the parameter values used when executing the evaluated approaches (and note that experiments trying a wide range of different parameter values would be extraordinary, see below). 
@@ -50,15 +50,14 @@ We stress that the use of optimization in SE is still a rapidly evolving field. 
 - [ ] Perform multiple trials either as a cross-validation (multiple independent executions) or temporally (multiple applications as part of a timed sequence), depending on the problem at hand. 
 - [ ] Make available random data splits (e.g., those used in data-driven approaches) or, at least, ensure splits are reproducibile. 
 - [ ] Compare distributions (rather than means) of results using appropriate statistics.
-- [ ] Compare solutions using an appropriate meta-evaluation criteria<sup>[15](#footnote15)</sup>. Justify the chosen criteria. 
-- [ ]
+- [ ] Compare solutions using an appropriate meta-evaluation criteria<sup>[16](#footnote16)</sup>. Justify the chosen criteria. 
 
 </checklist>
 
 ### Extraordinary
 <checklist name="Extraordinary">
     
-- [ ] Analyze different parameter choices to the algorithm, indicating how the final parameters were selected<sup>[16](#footnote16)</sup>. 
+- [ ] Analyze different parameter choices to the algorithm, indicating how the final parameters were selected<sup>[17](#footnote17)</sup>. 
 - [ ] Analyze the fitness landscape for one or more of the chosen fitness functions.
 
 </checklist>
@@ -143,8 +142,10 @@ can be found at https://tinyurl.com/y2ufofgu.
 
 <sup><a name="footnote13">13</a></sup>: E.g., the approach is too slow, human-in-the-loop.
 
-<sup><a name="footnote14">14</a></sup>: Including, for example, source code (of approach, solution representation, and fitness calculations), datasets used as experiment input, and collected experiment data (e.g., output logs, generated solutions). 
+<sup><a name="footnote14">14</a></sup>: Reviewers should reward sound and novel work and, where possible, support a diverse range of studies.
 
-<sup><a name="footnote15">15</a></sup>: For example, if applying a multi-objective optimization approach, then use a criterion that can analyze the Pareto frontier of solutions (e.g., generational distance and inverse generational distance)
+<sup><a name="footnote15">15/a></sup>: Including, for example, source code (of approach, solution representation, and fitness calculations), datasets used as experiment input, and collected experiment data (e.g., output logs, generated solutions). 
 
-<sup><a name="footnote16">16</a></sup>: E.g., applying hyperparameter optimization.
+<sup><a name="footnote16">16</a></sup>: For example, if applying a multi-objective optimization approach, then use a criterion that can analyze the Pareto frontier of solutions (e.g., generational distance and inverse generational distance)
+
+<sup><a name="footnote17">17</a></sup>: E.g., applying hyperparameter optimization.
