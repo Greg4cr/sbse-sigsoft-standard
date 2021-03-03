@@ -144,7 +144,7 @@ can be found at https://tinyurl.com/y2ufofgu.
 
 <sup><a name="footnote14">14</a></sup>: Reviewers should reward sound and novel work and, where possible, support a diverse range of studies.
 
-<sup><a name="footnote15">15/a></sup>: Including, for example, source code (of approach, solution representation, and fitness calculations), datasets used as experiment input, and collected experiment data (e.g., output logs, generated solutions). 
+<sup><a name="footnote15">15</a></sup>: Including, for example, source code (of approach, solution representation, and fitness calculations), datasets used as experiment input, and collected experiment data (e.g., output logs, generated solutions). 
 
 <sup><a name="footnote16">16</a></sup>: For example, if applying a multi-objective optimization approach, then use a criterion that can analyze the Pareto frontier of solutions (e.g., generational distance and inverse generational distance)
 
